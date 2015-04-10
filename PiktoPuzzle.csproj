@@ -42,19 +42,27 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="add.html" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\portfolio-item.css" />
     <Content Include="css\thumbnail-gallery.css" />
     <Content Include="ffmpegsumo.dll" />
     <Content Include="icudt.dll" />
+    <Content Include="img\400x300.gif" />
+    <Content Include="img\500x300.gif" />
+    <Content Include="img\750x500.gif" />
+    <Content Include="img\azure.jpg" />
     <Content Include="index.html" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery.js" />
+    <Content Include="js\test.js" />
     <Content Include="libEGL.dll" />
     <Content Include="libGLESv2.dll" />
     <Content Include="nw.exe" />
+    <Content Include="review.html" />
+    <Content Include="test.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="nw.pak" />
