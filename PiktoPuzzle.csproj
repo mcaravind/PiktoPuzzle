@@ -56,6 +56,7 @@
     <Content Include="index.html" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\caman.full.min.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\test.js" />
     <Content Include="libEGL.dll" />
