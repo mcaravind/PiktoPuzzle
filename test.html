@@ -15,8 +15,8 @@
         var chooser = $(name);
         chooser.change(function (evt) {
             console.log($(this).val());
-            $("#myCanvas").removeAttr("data-caman-id");
-            Caman("#myCanvas", $(this).val(), function () {
+            $("#cvsImage").removeAttr("data-caman-id");
+            Caman("#cvsImage", $(this).val(), function () {
                 // manipulate image here
                 //this.brightness(5).render();
                 this.render();
@@ -36,7 +36,7 @@
 <body>
     <button onclick="selectFile()">Select file</button>
     <input style="display:none;" id="fileDialog" type="file" />
-<canvas id="myCanvas"></canvas>
+<canvas id="cvsImage"></canvas>
     <div id="slider"></div>
 </body>
 </html>

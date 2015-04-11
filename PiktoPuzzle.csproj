@@ -45,6 +45,7 @@
     <Content Include="add.html" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\jquery-ui.css" />
     <Content Include="css\portfolio-item.css" />
     <Content Include="css\thumbnail-gallery.css" />
     <Content Include="ffmpegsumo.dll" />
@@ -57,6 +58,8 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\caman.full.min.js" />
+    <Content Include="js\jquery-1.10.2.js" />
+    <Content Include="js\jquery-ui.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\test.js" />
     <Content Include="libEGL.dll" />
