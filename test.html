@@ -3,11 +3,13 @@
     <!-- Either include the full CamanJS code including plugins -->
     <script src="js/jquery.js"></script>
     <script type="text/javascript" src="js/caman.full.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.css"/>
     <script>
-    $(function(){
-        
-        
-        
+    $(function() {
+        $("#slider").slider();
+
+
     });
     function chooseFile(name) {
         var chooser = $(name);
@@ -34,6 +36,7 @@
 <body>
     <button onclick="selectFile()">Select file</button>
     <input style="display:none;" id="fileDialog" type="file" />
-    <canvas id="myCanvas"></canvas>
+<canvas id="myCanvas"></canvas>
+    <div id="slider"></div>
 </body>
 </html>
