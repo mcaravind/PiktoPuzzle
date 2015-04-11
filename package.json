@@ -1,4 +1,5 @@
 ﻿{
     "name": "nw-demo",
-  "main": "add.html"
+    "main": "add.html",
+    "nodejs": true
 }

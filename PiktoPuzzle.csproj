@@ -55,6 +55,7 @@
     <Content Include="img\750x500.gif" />
     <Content Include="img\azure.jpg" />
     <Content Include="index.html" />
+    <Content Include="js\add.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\caman.full.min.js" />
@@ -72,6 +73,9 @@
     <None Include="nw.pak" />
     <None Include="package.json" />
     <None Include="script.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
