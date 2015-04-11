@@ -5,14 +5,35 @@
     <script type="text/javascript" src="js/caman.full.min.js"></script>
     <script>
     $(function(){
-        Caman("#myCanvas", "img/azure.jpg", function () {
-            // manipulate image here
-            //this.brightness(5).render();
-        });
+        
+        
+        
     });
+    function chooseFile(name) {
+        var chooser = $(name);
+        chooser.change(function (evt) {
+            console.log($(this).val());
+            $("#myCanvas").removeAttr("data-caman-id");
+            Caman("#myCanvas", $(this).val(), function () {
+                // manipulate image here
+                //this.brightness(5).render();
+                this.render();
+            });
+        });
+
+        chooser.trigger('click');
+        
+    }
+
+        function selectFile() {
+            chooseFile('#fileDialog');
+        }
+    
     </script>
 </head>
 <body>
+    <button onclick="selectFile()">Select file</button>
+    <input style="display:none;" id="fileDialog" type="file" />
     <canvas id="myCanvas"></canvas>
 </body>
 </html>
