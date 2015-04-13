@@ -30,12 +30,25 @@
             ////save file to data folder
             var fs = require('fs');
             var path = require('path');
-            var newFileName = path.join('data', 'file.'+ fileType);
+            var fName = "file_"+(new Date).yyyymmddHHMMss();
+            var newFileName = path.join('data', fName + '.' + fileType);
+            $("#hdnFileName").html(fName);
             fs.createReadStream(fileName).pipe(fs.createWriteStream(newFileName));
         });
     });
     chooser.trigger('click');
 }
+
+Date.prototype.yyyymmddHHMMss = function () {
+    var yyyy = this.getFullYear().toString();
+    var mm = (this.getMonth() + 1).toString(); // getMonth() is zero-based
+    var dd = this.getDate().toString();
+    var HH = (this.getHours()).toString();
+    var MM = this.getMinutes().toString();
+    var ss = this.getSeconds().toString();
+    return yyyy + (mm[1] ? mm : "0" + mm[0]) + (dd[1] ? dd : "0" + dd[0])+(HH[1]?HH:"0"+HH[0])+(MM[1]?MM:"0"+MM[0])+(ss[1]?ss:"0"+ss[0]); // padding
+};
+
 
 function selectFile() {
     chooseFile('#fileDialog');
@@ -87,5 +100,25 @@ function redrawBoundaries() {
 }
 
 function saveAnnotations() {
-    
+    var fileName = $("#hdnFileName").html();
+    var answer = $("#answer").val();
+    var hint = $("#hint").val();
+    var currHeight = $("#cvsImage").height();
+    var leftSliderVal = currHeight - $("#sliderLeft").slider("option", "value");
+    var rightSliderVal = currHeight - $("#sliderRight").slider("option", "value");
+    var topSliderVal = $("#sliderTop").slider("option", "value");
+    var bottomSliderVal = $("#sliderBottom").slider("option", "value");
+    var topVal = (leftSliderVal > rightSliderVal) ? leftSliderVal : rightSliderVal;
+    var bottomVal = (rightSliderVal < leftSliderVal) ? rightSliderVal : leftSliderVal;
+    var leftVal = (topSliderVal < bottomSliderVal) ? topSliderVal : bottomSliderVal;
+    var rightVal = (bottomSliderVal < topSliderVal) ? bottomSliderVal : topSliderVal;
+    var json = { 'item': { 'answer': answer, 'hint': hint, 'top': topVal, 'left': leftVal, 'bottom': bottomVal, 'right': rightVal } };
+    var jsonToWrite = JSON.stringify(json);
+    var fs = require('fs');
+    var path = require('path');
+    var newFileJsonName = path.join('data', fileName + '.json');
+    fs.appendFile(newFileJsonName, jsonToWrite, function(err) {
+        if (err)
+            alert(err);
+    });
 }
