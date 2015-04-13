@@ -1,5 +1,5 @@
 ﻿{
     "name": "nw-demo",
-    "main": "add.html",
+    "main": "index.html",
     "nodejs": true
 }

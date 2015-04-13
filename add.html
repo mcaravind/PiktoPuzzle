@@ -42,6 +42,13 @@
     <link rel="stylesheet" href="css/jquery-ui.css"/>
     <script>
         $(function () {
+            var fileName = getParameterByName('file');
+            if (fileName !== '') {
+                var imageFileName = getImageFileName(fileName);
+                var hdnFileName = imageFileName.split('.')[0];
+                $("#hdnFileName").html(hdnFileName);
+                reloadImageFile();
+            }
             $("#sliderTop").slider({
                 change: function (event, ui) {
                     handleSliderChanged();
