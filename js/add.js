@@ -198,6 +198,10 @@ function clearAnswerBoxes() {
     $("#hint").val('');
 }
 
+function displayAllAnswers() {
+    
+}
+
 function saveAnnotations() {
     var fileName = $("#hdnFileName").html();
     var answer = $("#answer").val();
@@ -211,17 +215,31 @@ function saveAnnotations() {
     var bottomVal = (rightSliderVal < leftSliderVal) ? rightSliderVal : leftSliderVal;
     var leftVal = (topSliderVal < bottomSliderVal) ? topSliderVal : bottomSliderVal;
     var rightVal = (bottomSliderVal > topSliderVal) ? bottomSliderVal : topSliderVal;
-    var json = { 'item': { 'answer': answer, 'hint': hint, 'top': topVal, 'left': leftVal, 'bottom': bottomVal, 'right': rightVal } };
+    
     var fs = require('fs');
     var path = require('path');
     var jsonFileName = path.join('data', fileName + '.json');
     var obj = JSON.parse(fs.readFileSync(jsonFileName, 'utf-8'));
+    var ids = $(obj['items']).map(function() {
+        return $(this)[0]['item'].id;
+    });
+    var maxid = ids.length === 0?0: Array.max(ids);
+    var json = { 'item': {'id':maxid+1, 'answer': answer, 'hint': hint, 'top': topVal, 'left': leftVal, 'bottom': bottomVal, 'right': rightVal } };
     obj['items'].push(json);
     var jsonToWrite = JSON.stringify(obj,null,4);
     fs.writeFile(jsonFileName, jsonToWrite, function(err) {
         if (err)
             alert(err);
         reloadImageFile();
+        displayAllAnswers();
         clearAnswerBoxes();
     });
 }
+
+Array.max = function (array) {
+    return Math.max.apply(Math, array);
+};
+
+Array.min = function (array) {
+    return Math.min.apply(Math, array);
+};

@@ -1,0 +1,27 @@
+{
+    "fileName": "file_20150413205750.jpg",
+    "items": [
+        {
+            "item": {
+                "id": 1,
+                "answer": "Patna",
+                "hint": "",
+                "top": 226,
+                "left": 281,
+                "bottom": 218,
+                "right": 314
+            }
+        },
+        {
+            "item": {
+                "id": 2,
+                "answer": "Thiruvananthapuram",
+                "hint": "",
+                "top": 536,
+                "left": 65,
+                "bottom": 528,
+                "right": 146
+            }
+        }
+    ]
+}
