@@ -109,7 +109,7 @@
         <!-- /.row -->
         <!-- Portfolio Item Row -->
         <div class="row">
-            <div id="hdnFileName"></div>
+            <div style="display: none;" id="hdnFileName"></div>
             <div class="col-md-9">
                 <div class="Table">
                     <div class="Row">
@@ -163,6 +163,11 @@
                     <input type="email" class="form-control" id="hint" placeholder="Hint (optional)">
                 </div>
                 <button class="btn btn-success" onclick=" saveAnnotations() ">Save</button>
+                <br/>
+                <br/>
+                <div id="divAnswers">
+                    <ol id="lstAnswers"></ol>
+                </div>
             </div>
         </div>
         <hr>

@@ -122,6 +122,7 @@ function reloadImageFile() {
             max: $("#cvsImage").width()
         });
         showWordBoxes(jsonFileName);
+        displayAllAnswers(jsonFileName);
     });
 }
 
@@ -198,8 +199,39 @@ function clearAnswerBoxes() {
     $("#hint").val('');
 }
 
-function displayAllAnswers() {
-    
+function deleteItem(jsonFileName,id) {
+    var fs = require('fs');
+    var path = require('path');
+    var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+    var items = obj['items'];
+    items = $.grep(items, function(e) {
+        return e['item'].id !== id;
+    });
+    obj['items'] = items;
+    var jsonToWrite = JSON.stringify(obj, null, 4);
+    var fileNameToWrite = path.join('data', jsonFileName);
+    fs.writeFile(fileNameToWrite, jsonToWrite, function (err) {
+        if (err)
+            alert(err);
+        reloadImageFile();
+    });
+}
+
+function displayAllAnswers(jsonFileName) {
+    var fs = require('fs');
+    var path = require('path');
+    var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+    var items = obj['items'];
+    $("#lstAnswers").html('');
+    $.each(items, function (index, obj) {
+        var clickevent = "deleteItem('" + jsonFileName + "'," + obj['item'].id + ")";
+        var btnId = 'del_' + obj['item'].id;
+        var delButtonHtml = '<button id="'+btnId+'" class="btn btn-danger btn-xs" onclick="' + clickevent + '">Delete</button>';
+        var li = $('<li/>', {
+            html: delButtonHtml + ' '+ obj['item'].answer
+        });
+        $("#lstAnswers").append(li);
+    });
 }
 
 function saveAnnotations() {
@@ -231,7 +263,6 @@ function saveAnnotations() {
         if (err)
             alert(err);
         reloadImageFile();
-        displayAllAnswers();
         clearAnswerBoxes();
     });
 }

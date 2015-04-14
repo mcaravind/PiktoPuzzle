@@ -1,0 +1,27 @@
+{
+    "fileName": "file_20150413205750.jpg",
+    "items": [
+        {
+            "item": {
+                "id": 2,
+                "answer": "Thiruvananthapuram",
+                "hint": "",
+                "top": 536,
+                "left": 65,
+                "bottom": 528,
+                "right": 146
+            }
+        },
+        {
+            "item": {
+                "id": 3,
+                "answer": "Gandhinagar",
+                "hint": "",
+                "top": 253,
+                "left": 29,
+                "bottom": 247,
+                "right": 81
+            }
+        }
+    ]
+}

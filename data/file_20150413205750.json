@@ -4,23 +4,34 @@
         {
             "item": {
                 "id": 1,
-                "answer": "Patna",
+                "answer": "Jaipur",
                 "hint": "",
-                "top": 226,
-                "left": 281,
-                "bottom": 218,
-                "right": 314
+                "top": 193,
+                "left": 110,
+                "bottom": 183,
+                "right": 136
             }
         },
         {
             "item": {
                 "id": 2,
-                "answer": "Thiruvananthapuram",
+                "answer": "Ranchi",
                 "hint": "",
-                "top": 536,
-                "left": 65,
-                "bottom": 528,
-                "right": 146
+                "top": 262,
+                "left": 266,
+                "bottom": 252,
+                "right": 295
+            }
+        },
+        {
+            "item": {
+                "id": 3,
+                "answer": "Hyderabad",
+                "hint": "",
+                "top": 370,
+                "left": 183,
+                "bottom": 359,
+                "right": 227
             }
         }
     ]
