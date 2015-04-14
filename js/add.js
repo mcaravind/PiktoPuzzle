@@ -40,6 +40,7 @@
                     alert(err);
             });
             fs.createReadStream(fileName).pipe(fs.createWriteStream(newFileName));
+            newImage();
         });
     });
     chooser.trigger('click');
@@ -232,6 +233,10 @@ function displayAllAnswers(jsonFileName) {
         });
         $("#lstAnswers").append(li);
     });
+}
+
+function newImage() {
+    $("#lstAnswers").html('');
 }
 
 function saveAnnotations() {
