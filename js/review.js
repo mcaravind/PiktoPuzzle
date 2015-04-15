@@ -15,9 +15,12 @@
             var point2X = lineItem['line'][2];
             var point2Y = lineItem['line'][3];
             if (index1 === 0) {
+                //to make sure you dont jump off the canvas
+                //to draw the next line
                 ctx.moveTo(point1X, point1Y);
             }
             ctx.lineTo(point2X, point2Y);
+             
         });
         ctx.closePath();
         ctx.fillStyle = '#FFFFFF';
