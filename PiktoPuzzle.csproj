@@ -55,6 +55,7 @@
     <Content Include="img\750x500.gif" />
     <Content Include="img\azure.jpg" />
     <Content Include="index.html" />
+    <Content Include="js\common.js" />
     <Content Include="js\index.js" />
     <Content Include="js\add.js" />
     <Content Include="js\bootstrap.js" />
@@ -63,6 +64,7 @@
     <Content Include="js\jquery-1.10.2.js" />
     <Content Include="js\jquery-ui.js" />
     <Content Include="js\jquery.js" />
+    <Content Include="js\review.js" />
     <Content Include="js\test.js" />
     <Content Include="libEGL.dll" />
     <Content Include="libGLESv2.dll" />

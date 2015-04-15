@@ -1,24 +1,81 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
     <title>Portfolio Item - Start Bootstrap Template</title>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/portfolio-item.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/caman.full.min.js"></script>
+    <script type="text/javascript" src="js/review.js"></script>
+    <style>
+        .Table {
+            display: table;
+        }
+
+        .Title {
+            display: table-caption;
+            text-align: center;
+            font-weight: bold;
+            font-size: larger;
+        }
+
+        .Heading {
+            display: table-row;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .Row {
+            display: table-row;
+        }
+
+        .Cell {
+            display: table-cell;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <script>
+        $(function () {
+            var fileName = getParameterByName('file');
+            if (fileName !== '') {
+                var imageFileName = review_getImageFileName(fileName);
+                var hdnFileName = imageFileName.split('.')[0];
+                $("#hdnFileName").html(hdnFileName);
+                review_reloadImageFile();
+            }
+            $("#sliderTop").slider({
+                change: function (event, ui) {
+                    handleSliderChanged();
+                }
+            });
+            $("#sliderBottom").slider({
+                change: function (event, ui) {
+                    handleSliderChanged();
+                }
+            });
+            $("#sliderLeft").slider({
+                orientation: "vertical",
+                change: function (event, ui) {
+                    handleSliderChanged();
+                }
+            });
+            $("#sliderRight").slider({
+                orientation: "vertical",
+                change: function (event, ui) {
+                    handleSliderChanged();
+                }
+            });
+
+        });
+    </script>
 </head>
 <body>
+
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -47,77 +104,70 @@
         <!-- /.container -->
     </nav>
     <!-- Page Content -->
-    <div class="container">
-        <!-- Portfolio Item Heading -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">
-                    Portfolio Item
-                    <small>Item Subheading</small>
-                </h1>
-            </div>
-        </div>
+    <div style="margin-left: 50px; margin-right: 50px;">
         <!-- /.row -->
         <!-- Portfolio Item Row -->
         <div class="row">
-            <div class="col-md-8">
-                <img class="img-responsive" src="img/750x500.gif" alt="">
-            </div>
-            <div class="col-md-4">
-                <h3>Project Description</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-                <h3>Project Details</h3>
-                <ul>
-                    <li>Lorem Ipsum</li>
-                    <li>Dolor Sit Amet</li>
-                    <li>Consectetur</li>
-                    <li>Adipiscing Elit</li>
-                </ul>
-            </div>
-        </div>
-        <!-- /.row -->
-        <!-- Related Projects Row -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h3 class="page-header">Related Projects</h3>
-            </div>
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="img/500x300.gif" alt="">
-                </a>
-            </div>
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="img/500x300.gif" alt="">
-                </a>
-            </div>
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="img/500x300.gif" alt="">
-                </a>
-            </div>
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="img/500x300.gif" alt="">
-                </a>
-            </div>
-        </div>
-        <!-- /.row -->
-        <hr>
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; PiktoPuzzle 2015</p>
+            <div style="display: none;" id="hdnFileName"></div>
+            <div class="col-md-9">
+                <div class="Table">
+                    <div class="Row">
+                        <div class="Cell">
+
+                        </div>
+                        <div class="Cell">
+                            <p>
+                                <div id="sliderTop"></div>
+                            </p>
+                        </div>
+                        <div class="Cell">
+
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+                            <div id="sliderLeft" style="height: 200px"></div>
+                        </div>
+                        <div class="Cell">
+                            <canvas id="cvsImage"></canvas>
+                        </div>
+                        <div class="Cell">
+                            <div id="sliderRight" style="height: 200px"></div>
+                        </div>
+                    </div>
+                    <div class="Row">
+                        <div class="Cell">
+
+                        </div>
+                        <div class="Cell">
+                            <p>
+                                <div id="sliderBottom"></div>
+                            </p>
+                        </div>
+                        <div class="Cell">
+
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- /.row -->
-        </footer>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="answer">Answer</label>
+                    <input type="email" class="form-control" id="answer" placeholder="Enter answer">
+                </div>
+                <div class="form-group">
+                    <label for="hint">Hint</label>
+                    <input type="email" class="form-control" id="hint" placeholder="Hint (optional)">
+                </div>
+                <button class="btn btn-success" onclick="submitAnswer()">Submit answer</button>
+                <br />
+                <br />
+                <div id="divAnswers">
+                    <ol id="lstAnswers"></ol>
+                </div>
+            </div>
+        </div>
+        <hr>
     </div>
-    <!-- /.container -->
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
