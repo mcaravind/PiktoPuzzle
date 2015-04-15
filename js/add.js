@@ -51,30 +51,37 @@ function showWordBoxes(jsonFileName) {
     var path = require('path');
     var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
     var items = obj['items'];
+    var elCanvas = document.getElementById("cvsImage");
+    var ctx = elCanvas.getContext("2d");
     $.each(items, function (index, obj) {
         var value = obj.item;
-        var top = value.top;
-        var left = value.left;
-        var right = value.right;
-        var bottom = value.bottom;
-        var elCanvas = document.getElementById("cvsImage");
-        var ctx = elCanvas.getContext("2d");
-        ctx.beginPath();
-        ctx.moveTo(left, top);
-        ctx.lineTo(right, top);
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.moveTo(left, top);
-        ctx.lineTo(left, bottom);
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.moveTo(right, bottom);
-        ctx.lineTo(left, bottom);
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.moveTo(right, bottom);
-        ctx.lineTo(right, top);
-        ctx.stroke();
+        var lines = value['lines'];
+        $.each(lines, function(index1, lineItem) {
+            var point1X = lineItem['line'][0];
+            var point1Y = lineItem['line'][1];
+            var point2X = lineItem['line'][2];
+            var point2Y = lineItem['line'][3];
+            ctx.beginPath();
+            ctx.moveTo(point1X, point1Y);
+            ctx.lineTo(point2X, point2Y);
+            ctx.stroke();
+        });
+        //var top = value.top;
+        //var left = value.left;
+        //var right = value.right;
+        //var bottom = value.bottom;
+        //ctx.beginPath();
+        //ctx.moveTo(left, top);
+        //ctx.lineTo(left, bottom);
+        //ctx.stroke();
+        //ctx.beginPath();
+        //ctx.moveTo(right, bottom);
+        //ctx.lineTo(left, bottom);
+        //ctx.stroke();
+        //ctx.beginPath();
+        //ctx.moveTo(right, bottom);
+        //ctx.lineTo(right, top);
+        //ctx.stroke();
     });
 }
 
@@ -246,13 +253,13 @@ function saveAnnotations() {
     var currHeight = $("#cvsImage").height();
     var leftSliderVal = currHeight - $("#sliderLeft").slider("option", "value");
     var rightSliderVal = currHeight - $("#sliderRight").slider("option", "value");
-    var topSliderVal = $("#sliderTop").slider("option", "value");
-    var bottomSliderVal = $("#sliderBottom").slider("option", "value");
-    var topVal = (leftSliderVal > rightSliderVal) ? leftSliderVal : rightSliderVal;
-    var bottomVal = (rightSliderVal < leftSliderVal) ? rightSliderVal : leftSliderVal;
+    var topSliderVal =  $("#sliderTop").slider("option", "value");
+    var bottomSliderVal =  $("#sliderBottom").slider("option", "value");
     var leftVal = (topSliderVal < bottomSliderVal) ? topSliderVal : bottomSliderVal;
     var rightVal = (bottomSliderVal > topSliderVal) ? bottomSliderVal : topSliderVal;
-    
+    var topVal = (leftSliderVal < rightSliderVal) ? leftSliderVal : rightSliderVal;
+    var bottomVal = (rightSliderVal > leftSliderVal) ? rightSliderVal : leftSliderVal;
+
     var fs = require('fs');
     var path = require('path');
     var jsonFileName = path.join('data', fileName + '.json');
@@ -260,8 +267,19 @@ function saveAnnotations() {
     var ids = $(obj['items']).map(function() {
         return $(this)[0]['item'].id;
     });
-    var maxid = ids.length === 0?0: Array.max(ids);
-    var json = { 'item': {'id':maxid+1, 'answer': answer, 'hint': hint, 'top': topVal, 'left': leftVal, 'bottom': bottomVal, 'right': rightVal } };
+    var maxid = ids.length === 0 ? 0 : Array.max(ids);
+    
+    var json = {
+        'item': {
+            'id': maxid + 1, 'answer': answer, 'hint': hint,
+            'lines': [
+                { 'line': [leftVal, bottomVal, leftVal, topVal] },
+                { 'line': [leftVal, topVal, rightVal, topVal] },
+                { 'line': [rightVal, topVal, rightVal, bottomVal] },
+                { 'line': [rightVal, bottomVal, leftVal, bottomVal] }
+            ]
+        }
+    };
     obj['items'].push(json);
     var jsonToWrite = JSON.stringify(obj,null,4);
     fs.writeFile(jsonFileName, jsonToWrite, function(err) {
