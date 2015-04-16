@@ -70,6 +70,11 @@
                     handleSliderChanged();
                 }
             });
+            $("#cvsImage").on('click', function(e) {
+                var canvasX = e.offsetX;
+                var canvasY = e.offsetY;
+                highlightClickedArea(canvasX, canvasY);
+            });
 
         });
     </script>

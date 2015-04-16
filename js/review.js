@@ -34,6 +34,78 @@ function review_reloadImageFromFile() {
     review_showWordBoxes(jsonFileName);
 }
 
+function relMouseCoords(event) {
+    var totalOffsetX = 0;
+    var totalOffsetY = 0;
+    var canvasX = 0;
+    var canvasY = 0;
+    var currentElement = this;
+
+    do {
+        totalOffsetX += currentElement.offsetLeft - currentElement.scrollLeft;
+        totalOffsetY += currentElement.offsetTop - currentElement.scrollTop;
+    }
+    while (currentElement === currentElement.offsetParent)
+
+    canvasX = event.pageX - totalOffsetX;
+    canvasY = event.pageY - totalOffsetY;
+
+    return { x: canvasX, y: canvasY }
+}
+
+
+HTMLCanvasElement.prototype.relMouseCoords = relMouseCoords;
+
+function highlightClickedArea(canvasX, canvasY) {
+    var jsonFileName = review_getJsonFileNameFromHiddenField();
+    var fs = require('fs');
+    var path = require('path');
+    var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+    var items = obj['items'];
+    var elCanvas = document.getElementById("cvsImage");
+    $.each(items, function (index, obj) {
+        var value = obj.item;
+        var lines = value['lines'];
+        var ctx = elCanvas.getContext("2d");
+        ctx.beginPath();
+        var vertX = [];
+        var vertY = [];
+        $.each(lines, function (index1, lineItem) {
+            var point1X = lineItem['line'][0];
+            var point1Y = lineItem['line'][1];
+            var point2X = lineItem['line'][2];
+            var point2Y = lineItem['line'][3];
+            vertX.push(point1X);
+            vertY.push(point1Y);
+            if (index1 === 0) {
+                //to make sure you dont jump off the canvas
+                //to draw the next line
+                ctx.moveTo(point1X, point1Y);
+            }
+            ctx.lineTo(point2X, point2Y);
+        });
+        if (pnpoly(4, vertX, vertY, canvasX, canvasY)) {
+            ctx.fillStyle = '#32cd32';
+        } else {
+            ctx.fillStyle = '#FFFFFF';
+        }
+        ctx.closePath();
+        ctx.stroke();
+        ctx.fill();
+    });
+}
+
+function pnpoly(nvert, vertx, verty, testx, testy) {
+    var i, j, c = false;
+    for (i = 0, j = nvert - 1; i < nvert; j = i++) {
+        if (((verty[i] > testy) !== (verty[j] > testy)) &&
+            (testx < (vertx[j] - vertx[i]) * (testy - verty[i]) / (verty[j] - verty[i]) + vertx[i])) {
+            c = !c;
+        }
+    }
+    return c;
+}
+
 function review_getJsonFileNameFromHiddenField() {
     return $("#hdnFileName").html() + ".json";
 }
