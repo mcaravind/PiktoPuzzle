@@ -1,31 +1,34 @@
 ﻿function review_showWordBoxes(jsonFileName) {
-    var fs = require('fs');
-    var path = require('path');
-    var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
-    var items = obj['items'];
+    //var fs = require('fs');
+    //var path = require('path');
+    //var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+    var items = window.items;
     var elCanvas = document.getElementById("cvsImage");
     $.each(items, function (index, obj) {
         var value = obj.item;
-        var lines = value['lines'];
-        var ctx = elCanvas.getContext("2d");
-        ctx.beginPath();
-        $.each(lines, function (index1, lineItem) {
-            var point1X = lineItem['line'][0];
-            var point1Y = lineItem['line'][1];
-            var point2X = lineItem['line'][2];
-            var point2Y = lineItem['line'][3];
-            if (index1 === 0) {
-                //to make sure you dont jump off the canvas
-                //to draw the next line
-                ctx.moveTo(point1X, point1Y);
-            }
-            ctx.lineTo(point2X, point2Y);
-             
-        });
-        ctx.closePath();
-        ctx.fillStyle = '#FFFFFF';
-        ctx.stroke();
-        ctx.fill();
+        var id = parseInt(value['id']);
+        if ($.inArray(id, window.answeredItemsIds) === -1) {
+            var lines = value['lines'];
+            var ctx = elCanvas.getContext("2d");
+            ctx.beginPath();
+            $.each(lines, function (index1, lineItem) {
+                var point1X = lineItem['line'][0];
+                var point1Y = lineItem['line'][1];
+                var point2X = lineItem['line'][2];
+                var point2Y = lineItem['line'][3];
+                if (index1 === 0) {
+                    //to make sure you dont jump off the canvas
+                    //to draw the next line
+                    ctx.moveTo(point1X, point1Y);
+                }
+                ctx.lineTo(point2X, point2Y);
+
+            });
+            ctx.closePath();
+            ctx.fillStyle = '#FFFFFF';
+            ctx.stroke();
+            ctx.fill();
+        }
     });
 }
 
@@ -56,43 +59,117 @@ function relMouseCoords(event) {
 
 HTMLCanvasElement.prototype.relMouseCoords = relMouseCoords;
 
-function highlightClickedArea(canvasX, canvasY) {
+function loadJsonInMemory() {
     var jsonFileName = review_getJsonFileNameFromHiddenField();
     var fs = require('fs');
     var path = require('path');
     var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
-    var items = obj['items'];
+    window.items = obj['items'];
+    window.answeredItemsIds = [];
+}
+
+function highlightClickedArea(canvasX, canvasY) {
+    var items = window.items;
     var elCanvas = document.getElementById("cvsImage");
     $.each(items, function (index, obj) {
         var value = obj.item;
-        var lines = value['lines'];
-        var ctx = elCanvas.getContext("2d");
-        ctx.beginPath();
-        var vertX = [];
-        var vertY = [];
-        $.each(lines, function (index1, lineItem) {
-            var point1X = lineItem['line'][0];
-            var point1Y = lineItem['line'][1];
-            var point2X = lineItem['line'][2];
-            var point2Y = lineItem['line'][3];
-            vertX.push(point1X);
-            vertY.push(point1Y);
-            if (index1 === 0) {
-                //to make sure you dont jump off the canvas
-                //to draw the next line
-                ctx.moveTo(point1X, point1Y);
+        var id = parseInt(value['id']);
+        if ($.inArray(id, window.answeredItemsIds) === -1) {
+            var lines = value['lines'];
+            var ctx = elCanvas.getContext("2d");
+            ctx.beginPath();
+            var vertX = [];
+            var vertY = [];
+            $.each(lines, function (index1, lineItem) {
+                var point1X = lineItem['line'][0];
+                var point1Y = lineItem['line'][1];
+                var point2X = lineItem['line'][2];
+                var point2Y = lineItem['line'][3];
+                vertX.push(point1X);
+                vertY.push(point1Y);
+                if (index1 === 0) {
+                    //to make sure you dont jump off the canvas
+                    //to draw the next line
+                    ctx.moveTo(point1X, point1Y);
+                }
+                ctx.lineTo(point2X, point2Y);
+            });
+            if (pnpoly(4, vertX, vertY, canvasX, canvasY)) {
+                ctx.fillStyle = '#adff2f';
+                $("#hdnAnswer").html(value['answer']);
+                $("#hdnHint").html(value['hint']);
+                $("#hdnItemId").html(value['id']);
+            } else {
+                ctx.fillStyle = '#FFFFFF';
             }
-            ctx.lineTo(point2X, point2Y);
-        });
-        if (pnpoly(4, vertX, vertY, canvasX, canvasY)) {
-            ctx.fillStyle = '#32cd32';
-        } else {
-            ctx.fillStyle = '#FFFFFF';
+            ctx.closePath();
+            ctx.stroke();
+            ctx.fill();
         }
-        ctx.closePath();
-        ctx.stroke();
-        ctx.fill();
     });
+}
+
+function submitAnswer() {
+    var actualAnswer = $("#hdnAnswer").html();
+    var givenAnswer = $("#answer").val();
+    var dist = levDist(actualAnswer, givenAnswer);
+    //alert('actual answer = ' + actualAnswer + ' edit distance = ' + dist);
+    window.answeredItemsIds.push(parseInt($("#hdnItemId").html()));
+    $("#answer").val('');
+    $("#hint").val('');
+    review_reloadImageFile();
+}
+
+//http://www.merriampark.com/ld.htm, http://www.mgilleland.com/ld/ldjavascript.htm, Damerau–Levenshtein distance (Wikipedia)
+var levDist = function (s, t) {
+    var d = []; //2d matrix
+
+    // Step 1
+    var n = s.length;
+    var m = t.length;
+
+    if (n === 0) return m;
+    if (m === 0) return n;
+
+    //Create an array of arrays in javascript (a descending loop is quicker)
+    for (var i = n; i >= 0; i--) d[i] = [];
+
+    // Step 2
+    for (var i = n; i >= 0; i--) d[i][0] = i;
+    for (var j = m; j >= 0; j--) d[0][j] = j;
+
+    // Step 3
+    for (var i = 1; i <= n; i++) {
+        var s_i = s.charAt(i - 1);
+
+        // Step 4
+        for (var j = 1; j <= m; j++) {
+
+            //Check the jagged ld total so far
+            if (i == j && d[i][j] > 4) return n;
+
+            var t_j = t.charAt(j - 1);
+            var cost = (s_i == t_j) ? 0 : 1; // Step 5
+
+            //Calculate the minimum
+            var mi = d[i - 1][j] + 1;
+            var b = d[i][j - 1] + 1;
+            var c = d[i - 1][j - 1] + cost;
+
+            if (b < mi) mi = b;
+            if (c < mi) mi = c;
+
+            d[i][j] = mi; // Step 6
+
+            //Damerau transposition
+            if (i > 1 && j > 1 && s_i === t.charAt(j - 2) && s.charAt(i - 2) === t_j) {
+                d[i][j] = Math.min(d[i][j], d[i - 2][j - 2] + cost);
+            }
+        }
+    }
+
+    // Step 7
+    return d[n][m];
 }
 
 function pnpoly(nvert, vertx, verty, testx, testy) {

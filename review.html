@@ -70,6 +70,7 @@
                     handleSliderChanged();
                 }
             });
+            loadJsonInMemory();
             $("#cvsImage").on('click', function(e) {
                 var canvasX = e.offsetX;
                 var canvasY = e.offsetY;
@@ -157,6 +158,9 @@
             </div>
             <div class="col-md-3">
                 <div class="form-group">
+                    <div id="hdnItemId" style="display: none;"></div>
+                    <div id="hdnAnswer" style="display: none;"></div>
+                    <div id="hdnHint" style="display: none;"></div>
                     <label for="answer">Answer</label>
                     <input type="email" class="form-control" id="answer" placeholder="Enter answer">
                 </div>
