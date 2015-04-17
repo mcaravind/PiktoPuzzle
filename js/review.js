@@ -95,6 +95,11 @@ function highlightClickedArea(canvasX, canvasY) {
                 ctx.lineTo(point2X, point2Y);
             });
             if (pnpoly(4, vertX, vertY, canvasX, canvasY)) {
+                window.penalty = 0;
+                window.hintNumber = 0;
+                window.hintPosArray = [];
+                $("#divHint").html();
+                $("#divPenalty").html();
                 ctx.fillStyle = '#adff2f';
                 $("#hdnAnswer").html(value['answer']);
                 $("#hdnHint").html(value['hint']);
@@ -109,12 +114,61 @@ function highlightClickedArea(canvasX, canvasY) {
     });
 }
 
+function showHint() {
+    var actualAnswer = $("#hdnAnswer").html();
+    var allChars = actualAnswer.split('');
+    var displayString = '';
+    if (window.hintNumber === 0) {
+        $.each(allChars, function (index, value) {
+            if ($.inArray(index, window.hintPosArray) === -1) {
+                displayString += '_ ';
+            } else {
+                displayString += value + ' ';
+            }
+        });
+        $("#divHint").html(displayString);
+        window.hintNumber = 1;
+    } else {
+        var availableIndices = [];
+        $.each(allChars, function(index, value) {
+            if ($.inArray(index, window.hintPosArray) === -1) {
+                availableIndices.push(index);
+            }
+        });
+        var randomPos = Math.floor(Math.random() * availableIndices.length);
+        var randomIndex = availableIndices[randomPos];
+        window.hintPosArray.push(randomIndex);
+        $.each(allChars, function(index, value) {
+            if ($.inArray(index, window.hintPosArray) === -1) {
+                displayString += '_ ';
+            } else {
+                displayString += value + ' ';
+            }
+        });
+        $("#divHint").html(displayString);
+    }
+    window.penalty += 1;
+    $("#divPenalty").html('Penalty: ' + window.penalty.toString());
+}
+
+String.prototype.replaceArray = function (find, replace) {
+    var replaceString = this;
+    for (var i = 0; i < find.length; i++) {
+        replaceString = replaceString.replace(find[i], replace[i]);
+    }
+    return replaceString;
+};
+
 function submitAnswer() {
     var actualAnswer = $("#hdnAnswer").html();
     var givenAnswer = $("#answer").val();
-    var dist = levDist(actualAnswer, givenAnswer);
-    //alert('actual answer = ' + actualAnswer + ' edit distance = ' + dist);
+    var dist = levDist(actualAnswer.toLowerCase(), givenAnswer.toLowerCase());
+    var scalingFactor = 1;
     window.answeredItemsIds.push(parseInt($("#hdnItemId").html()));
+    var li = $('<li/>', {
+        html: actualAnswer + ' Max Score: ' +(actualAnswer.length * scalingFactor).toString() + '  Your score: '+ ((scalingFactor * actualAnswer.length) - dist - window.penalty).toString()
+    });
+    $("#lstAnswers").append(li);
     $("#answer").val('');
     $("#hint").val('');
     review_reloadImageFile();

@@ -71,6 +71,7 @@
                 }
             });
             loadJsonInMemory();
+            
             $("#cvsImage").on('click', function(e) {
                 var canvasX = e.offsetX;
                 var canvasY = e.offsetY;
@@ -168,9 +169,12 @@
                     <label for="hint">Hint</label>
                     <input type="email" class="form-control" id="hint" placeholder="Hint (optional)">
                 </div>
+                <button class="btn btn-warning" onclick="showHint()">Hint letter</button>
                 <button class="btn btn-success" onclick="submitAnswer()">Submit answer</button>
                 <br />
-                <br />
+                <br/>
+                <div id="divHint"></div>
+                <div id="divPenalty"></div>
                 <div id="divAnswers">
                     <ol id="lstAnswers"></ol>
                 </div>
