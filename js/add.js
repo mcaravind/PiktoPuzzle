@@ -204,7 +204,6 @@ function getParameterByName(name) //courtesy Artem
 
 function clearAnswerBoxes() {
     $("#answer").val('');
-    $("#hint").val('');
 }
 
 function deleteItem(jsonFileName,id) {
@@ -249,7 +248,6 @@ function newImage() {
 function saveAnnotations() {
     var fileName = $("#hdnFileName").html();
     var answer = $("#answer").val();
-    var hint = $("#hint").val();
     var currHeight = $("#cvsImage").height();
     var leftSliderVal = currHeight - $("#sliderLeft").slider("option", "value");
     var rightSliderVal = currHeight - $("#sliderRight").slider("option", "value");
@@ -268,10 +266,11 @@ function saveAnnotations() {
         return $(this)[0]['item'].id;
     });
     var maxid = ids.length === 0 ? 0 : Array.max(ids);
-    
+    var lastDateModified = Date.now();
+    obj['lastModified'] = lastDateModified;
     var json = {
         'item': {
-            'id': maxid + 1, 'answer': answer, 'hint': hint,
+            'id': maxid + 1, 'answer': answer, 
             'lines': [
                 { 'line': [leftVal, bottomVal, leftVal, topVal] },
                 { 'line': [leftVal, topVal, rightVal, topVal] },

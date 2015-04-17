@@ -65,6 +65,7 @@ function loadJsonInMemory() {
     var path = require('path');
     var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
     window.items = obj['items'];
+    window.lastModified = obj['lastModified'];
     window.answeredItemsIds = [];
 }
 
@@ -98,12 +99,15 @@ function highlightClickedArea(canvasX, canvasY) {
                 window.penalty = 0;
                 window.hintNumber = 0;
                 window.hintPosArray = [];
-                $("#divHint").html();
-                $("#divPenalty").html();
+                $("#btnSubmit").prop("disabled", false);
+                $("#btnHint").prop("disabled", false);
+                $("#divHint").html('');
+                $("#divPenalty").html('');
                 ctx.fillStyle = '#adff2f';
                 $("#hdnAnswer").html(value['answer']);
                 $("#hdnHint").html(value['hint']);
                 $("#hdnItemId").html(value['id']);
+                $("#hdnDateModified").html(window.lastModified);
             } else {
                 ctx.fillStyle = '#FFFFFF';
             }
@@ -115,8 +119,14 @@ function highlightClickedArea(canvasX, canvasY) {
 }
 
 function showHint() {
+    var availableIndices = [];
     var actualAnswer = $("#hdnAnswer").html();
     var allChars = actualAnswer.split('');
+    $.each(allChars, function (index, value) {
+        if ($.inArray(index, window.hintPosArray) === -1) {
+            availableIndices.push(index);
+        }
+    });
     var displayString = '';
     if (window.hintNumber === 0) {
         $.each(allChars, function (index, value) {
@@ -129,12 +139,6 @@ function showHint() {
         $("#divHint").html(displayString);
         window.hintNumber = 1;
     } else {
-        var availableIndices = [];
-        $.each(allChars, function(index, value) {
-            if ($.inArray(index, window.hintPosArray) === -1) {
-                availableIndices.push(index);
-            }
-        });
         var randomPos = Math.floor(Math.random() * availableIndices.length);
         var randomIndex = availableIndices[randomPos];
         window.hintPosArray.push(randomIndex);
@@ -147,7 +151,9 @@ function showHint() {
         });
         $("#divHint").html(displayString);
     }
-    window.penalty += 1;
+    if (availableIndices.length > 0) {
+        window.penalty += 1;
+    }
     $("#divPenalty").html('Penalty: ' + window.penalty.toString());
 }
 
@@ -163,15 +169,33 @@ function submitAnswer() {
     var actualAnswer = $("#hdnAnswer").html();
     var givenAnswer = $("#answer").val();
     var dist = levDist(actualAnswer.toLowerCase(), givenAnswer.toLowerCase());
-    var scalingFactor = 1;
+    var lastDateModified = new Date(+$("#hdnDateModified").html());
+    var numDays = parseInt((Date.now()- lastDateModified) / (24 * 3600 * 1000));
+    var scalingFactor = Math.floor(Math.log(numDays+1)/Math.log(2));
     window.answeredItemsIds.push(parseInt($("#hdnItemId").html()));
+    var currItemScore = parseInt((scalingFactor * givenAnswer.trim().length) - dist - window.penalty);
+    if (currItemScore < 0) currItemScore = 0;
+    var currItemMaxScore = parseInt(actualAnswer.length * scalingFactor);
+    window.itemScoreTotal += currItemScore;
+    window.itemMaxScoreTotal += currItemMaxScore;
     var li = $('<li/>', {
-        html: actualAnswer + ' Max Score: ' +(actualAnswer.length * scalingFactor).toString() + '  Your score: '+ ((scalingFactor * actualAnswer.length) - dist - window.penalty).toString()
+        html: actualAnswer + ' Max Score: ' + currItemMaxScore.toString() + '  Your score: '+ currItemScore.toString()
     });
+    var percentAnswered = Math.floor(window.answeredItemsIds.length * 100 / window.items.length);
+    $("#progressBar").css('width', percentAnswered + "%");
+    $("#progressText").html(window.answeredItemsIds.length + '/' + window.items.length + ' items answered');
     $("#lstAnswers").append(li);
     $("#answer").val('');
-    $("#hint").val('');
     review_reloadImageFile();
+    if (window.items.length === window.answeredItemsIds.length) {
+        //all items answered, calculate full score
+        var liFinal = $('<li/>', {
+            html: 'Total score: '+window.itemScoreTotal.toString()+"/"+window.itemMaxScoreTotal.toString()
+        });
+        $("#divAnswers").append(liFinal);
+    }
+    $("#btnSubmit").prop("disabled", true);
+    $("#btnHint").prop("disabled", true);
 }
 
 //http://www.merriampark.com/ld.htm, http://www.mgilleland.com/ld/ldjavascript.htm, Damerau–Levenshtein distance (Wikipedia)
@@ -300,11 +324,6 @@ function getParameterByName(name) //courtesy Artem
         return "";
     else
         return decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
-function clearAnswerBoxes() {
-    $("#answer").val('');
-    $("#hint").val('');
 }
 
 function newImage() {
