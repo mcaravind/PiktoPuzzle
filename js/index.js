@@ -6,18 +6,30 @@
     return imageFileName;
 }
 
+function deleteMap(fileName) {
+    var fs = require('fs');
+    var path = require('path');
+    var imageFileName = getImageFileName(fileName);
+    var fsImageFile = path.join('data', imageFileName.toString());
+    var fsJsonFile = path.join('data', fileName.toString());
+    fs.unlinkSync(fsImageFile);
+    fs.unlinkSync(fsJsonFile);
+    loadFiles();
+}
+
 function loadFiles() {
     var fs = require('fs');
     var EventEmitter = require('events').EventEmitter;
     var filesEE = new EventEmitter();
     var myfiles = [];
     var path = require('path');
+    $("#divRow").html('');
     // this event will be called when all files have been added to myfiles
     filesEE.on('files_ready', function () {
         var sHtml = '';
         var brTag = $('<br/>');
+        
         $.each(myfiles, function (index, value) {
-            //sHtml += value + "<br/>";
             var imageFileNameWithoutPath = getImageFileName(value);
             var imageFileName = path.join('data', imageFileNameWithoutPath);
             var divThumb = $('<div/>', {
@@ -46,15 +58,31 @@ function loadFiles() {
             var spanTagReview = $('<span/>', {
                 html: 'Review'
             });
+            var buttonDelete = $('<button/>', {
+                text: 'Delete',
+                class: 'btn btn-primary btn-xs',
+                id: value
+            });
             atagReview.append(spanTagReview);
             divTag.append(" ");
             divTag.append(atagEdit);
             divTag.append(" ");
             divTag.append(atagReview);
+            divTag.append(" ");
+            divTag.append(buttonDelete);
             divTag.append(brTag);
             divThumb.append(divTag);
             divThumb.append(aThumb);
             $("#divRow").append(divThumb);
+            $(buttonDelete).confirmation({
+                onConfirm:function(button) {
+                    deleteMap($(buttonDelete).attr("id"));
+                    $(buttonDelete).confirmation('hide');
+                },
+                onCancel:function(button) {
+                    $(buttonDelete).confirmation('hide');
+                }
+            });
         });
     });
 
@@ -69,3 +97,4 @@ function loadFiles() {
         filesEE.emit('files_ready'); // trigger files_ready event
     });
 }
+

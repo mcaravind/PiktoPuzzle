@@ -55,6 +55,8 @@
     <Content Include="img\750x500.gif" />
     <Content Include="img\azure.jpg" />
     <Content Include="index.html" />
+    <Content Include="js\bootstrap-confirmation.js" />
+    <Content Include="js\bootstrap-tooltip.js" />
     <Content Include="js\common.js" />
     <Content Include="js\index.js" />
     <Content Include="js\add.js" />
@@ -63,6 +65,7 @@
     <Content Include="js\caman.full.min.js" />
     <Content Include="js\jquery-1.10.2.js" />
     <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.confirm.min.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\review.js" />
     <Content Include="js\test.js" />

@@ -171,7 +171,7 @@ function submitAnswer() {
     var dist = levDist(actualAnswer.toLowerCase(), givenAnswer.toLowerCase());
     var lastDateModified = new Date(+$("#hdnDateModified").html());
     var numDays = parseInt((Date.now()- lastDateModified) / (24 * 3600 * 1000));
-    var scalingFactor = Math.floor(Math.log(numDays+1)/Math.log(2));
+    var scalingFactor = Math.floor(Math.log(numDays+1)/Math.log(2))+1;
     window.answeredItemsIds.push(parseInt($("#hdnItemId").html()));
     var currItemScore = parseInt((scalingFactor * givenAnswer.trim().length) - dist - window.penalty);
     if (currItemScore < 0) currItemScore = 0;
