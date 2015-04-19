@@ -12,8 +12,10 @@ function deleteMap(fileName) {
     var imageFileName = getImageFileName(fileName);
     var fsImageFile = path.join('data', imageFileName.toString());
     var fsJsonFile = path.join('data', fileName.toString());
+    var fsScoreFile = path.join('data', fileName.replace('file_', 'score_'));
     fs.unlinkSync(fsImageFile);
     fs.unlinkSync(fsJsonFile);
+    fs.unlinkSync(fsScoreFile);
     loadFiles();
 }
 
@@ -90,11 +92,18 @@ function loadFiles() {
     fs.readdir('data', function (err, files) {
         if (err) throw err;
         files.forEach(function (file) {
-            if (file.substr(-5) === '.json') {
+            if (file.substr(-5) === '.json' && file.startsWith('file_')) {
                 myfiles.push(file);
             }
         });
         filesEE.emit('files_ready'); // trigger files_ready event
     });
+}
+
+if (typeof String.prototype.startsWith != 'function') {
+    // see below for better implementation!
+    String.prototype.startsWith = function (str) {
+        return this.indexOf(str) === 0;
+    };
 }
 

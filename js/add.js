@@ -30,8 +30,11 @@
             ////save file to data folder
             var fs = require('fs');
             var path = require('path');
-            var fName = "file_"+(new Date).yyyymmddHHMMss();
+            var dateStr = (new Date).yyyymmddHHMMss();
+            var fName = "file_" + dateStr;
+            var scoreFileName = "score_" + dateStr;
             var newFileName = path.join('data', fName + '.' + fileType);
+            
             $("#hdnFileName").html(fName);
             var jsonToWrite = JSON.stringify({ 'fileName': fName + '.' + fileType,'items':[] });
             var newFileJsonName = path.join('data', fName + '.json');
@@ -40,6 +43,12 @@
                     alert(err);
             });
             fs.createReadStream(fileName).pipe(fs.createWriteStream(newFileName));
+            var scoreJsonToWrite = JSON.stringify({ 'fileName': fName + '.' + fileType, 'scores': [] });
+            var newScoreFileName = path.join('data', scoreFileName + '.json');
+            fs.appendFile(newScoreFileName, scoreJsonToWrite, function (err) {
+                if (err)
+                    alert(err);
+            });
             newImage();
         });
     });

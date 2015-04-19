@@ -69,6 +69,14 @@ function loadJsonInMemory() {
     window.answeredItemsIds = [];
 }
 
+function saveScore(totalScore, maxScore) {
+    var jsonFileName = review_getJsonFileNameFromHiddenField();
+    var fs = require('fs');
+    var path = require('path');
+    var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+    
+}
+
 function highlightClickedArea(canvasX, canvasY) {
     var items = window.items;
     var elCanvas = document.getElementById("cvsImage");
