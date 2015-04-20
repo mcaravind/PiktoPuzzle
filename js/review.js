@@ -67,14 +67,45 @@ function loadJsonInMemory() {
     window.items = obj['items'];
     window.lastModified = obj['lastModified'];
     window.answeredItemsIds = [];
+    window.answeredItemScores = [];
+    window.answeredItemMaxScores = [];
+    window.answeredItems = [];
 }
 
 function saveScore(totalScore, maxScore) {
     var jsonFileName = review_getJsonFileNameFromHiddenField();
+    var scoreFileName = jsonFileName.replace('file_', 'score_');
     var fs = require('fs');
     var path = require('path');
-    var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
-    
+    var obj = JSON.parse(fs.readFileSync(path.join('data', scoreFileName), 'utf-8'));
+    var scores = obj['scores'];
+    var score = new Object();
+    score.lastModified = Date.now();
+    score.fullScore = totalScore;
+    score.fullMaxScore = maxScore;
+    score.itemScores = [];
+    var answeredItemsIds = window.answeredItemsIds;
+    var answeredItems = window.answeredItems;
+    var answeredItemScores = window.answeredItemScores;
+    var answeredItemMaxScores = window.answeredItemMaxScores;
+    $.each(answeredItemsIds, function(index, value) {
+        var itemid = value;
+        var itemScore = answeredItemScores[index];
+        var itemMaxScore = answeredItemMaxScores[index];
+        var answer = answeredItems[index];
+        var itemScoreObj = new Object();
+        itemScoreObj.itemid = itemid;
+        itemScoreObj.answer = answer;
+        itemScoreObj.score = itemScore;
+        itemScoreObj.maxscore = itemMaxScore;
+        score.itemScores.push(itemScoreObj);
+    });
+    scores.push(score);
+    var jsonToWrite = JSON.stringify(obj, null, 4);
+    fs.writeFile(path.join('data',scoreFileName), jsonToWrite, function(err) {
+        if (err)
+            alert(err);
+    });
 }
 
 function highlightClickedArea(canvasX, canvasY) {
@@ -184,6 +215,9 @@ function submitAnswer() {
     var currItemScore = parseInt((scalingFactor * givenAnswer.trim().length) - dist - window.penalty);
     if (currItemScore < 0) currItemScore = 0;
     var currItemMaxScore = parseInt(actualAnswer.length * scalingFactor);
+    window.answeredItemScores.push(currItemScore);
+    window.answeredItemMaxScores.push(currItemMaxScore);
+    window.answeredItems.push(actualAnswer);
     window.itemScoreTotal += currItemScore;
     window.itemMaxScoreTotal += currItemMaxScore;
     var li = $('<li/>', {
@@ -201,6 +235,7 @@ function submitAnswer() {
             html: 'Total score: '+window.itemScoreTotal.toString()+"/"+window.itemMaxScoreTotal.toString()
         });
         $("#divAnswers").append(liFinal);
+        saveScore(window.itemScoreTotal, window.itemMaxScoreTotal);
     }
     $("#btnSubmit").prop("disabled", true);
     $("#btnHint").prop("disabled", true);

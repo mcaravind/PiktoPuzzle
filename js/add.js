@@ -3,6 +3,7 @@
     chooser.change(function (evt) {
         console.log($(this).val());
         var fileName = $(this).val();
+        console.log('only name = ' + fileName.replace(/^.*[\\\/]/, ''));
         var fileType = $(this).val().split('.')[1];
         $("#cvsImage").removeAttr("data-caman-id");
         Caman("#cvsImage", $(this).val(), function () {
@@ -36,14 +37,14 @@
             var newFileName = path.join('data', fName + '.' + fileType);
             
             $("#hdnFileName").html(fName);
-            var jsonToWrite = JSON.stringify({ 'fileName': fName + '.' + fileType,'items':[] });
+            var jsonToWrite = JSON.stringify({ 'originalFileName': fileName.replace(/^.*[\\\/]/, ''), 'fileName': fName + '.' + fileType, 'items': [] });
             var newFileJsonName = path.join('data', fName + '.json');
             fs.appendFile(newFileJsonName, jsonToWrite, function (err) {
                 if (err)
                     alert(err);
             });
             fs.createReadStream(fileName).pipe(fs.createWriteStream(newFileName));
-            var scoreJsonToWrite = JSON.stringify({ 'fileName': fName + '.' + fileType, 'scores': [] });
+            var scoreJsonToWrite = JSON.stringify({'fileName': fName + '.' + fileType, 'scores': [] });
             var newScoreFileName = path.join('data', scoreFileName + '.json');
             fs.appendFile(newScoreFileName, scoreJsonToWrite, function (err) {
                 if (err)

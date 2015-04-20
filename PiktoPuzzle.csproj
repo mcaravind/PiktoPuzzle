@@ -68,11 +68,13 @@
     <Content Include="js\jquery.confirm.min.js" />
     <Content Include="js\jquery.js" />
     <Content Include="js\review.js" />
+    <Content Include="js\scores.js" />
     <Content Include="js\test.js" />
     <Content Include="libEGL.dll" />
     <Content Include="libGLESv2.dll" />
     <Content Include="nw.exe" />
     <Content Include="review.html" />
+    <Content Include="scores.html" />
     <Content Include="test.html" />
   </ItemGroup>
   <ItemGroup>
