@@ -4,7 +4,7 @@ PiktoPuzzle is a nw.js (formerly node-webkit) based desktop app to help memorize
 
 __Installation:__
 
-Download the Zip file for the project, navigate to the folder PiktoPuzzle. Click on nw.exe to launch the application. 
+Download the Zip file for the project, navigate to the folder PiktoPuzzle-Beta. Click on nw.exe to launch the application. 
 
 __Features__
 
