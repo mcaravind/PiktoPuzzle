@@ -75,22 +75,6 @@ function showWordBoxes(jsonFileName) {
             ctx.lineTo(point2X, point2Y);
             ctx.stroke();
         });
-        //var top = value.top;
-        //var left = value.left;
-        //var right = value.right;
-        //var bottom = value.bottom;
-        //ctx.beginPath();
-        //ctx.moveTo(left, top);
-        //ctx.lineTo(left, bottom);
-        //ctx.stroke();
-        //ctx.beginPath();
-        //ctx.moveTo(right, bottom);
-        //ctx.lineTo(left, bottom);
-        //ctx.stroke();
-        //ctx.beginPath();
-        //ctx.moveTo(right, bottom);
-        //ctx.lineTo(right, top);
-        //ctx.stroke();
     });
 }
 
@@ -215,22 +199,24 @@ function clearAnswerBoxes() {
     $("#answer").val('');
 }
 
-function deleteItem(jsonFileName,id) {
-    var fs = require('fs');
-    var path = require('path');
-    var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
-    var items = obj['items'];
-    items = $.grep(items, function(e) {
-        return e['item'].id !== id;
-    });
-    obj['items'] = items;
-    var jsonToWrite = JSON.stringify(obj, null, 4);
-    var fileNameToWrite = path.join('data', jsonFileName);
-    fs.writeFile(fileNameToWrite, jsonToWrite, function (err) {
-        if (err)
-            alert(err);
-        reloadImageFile();
-    });
+function deleteItem(jsonFileName, id) {
+    if (confirm('Delete?')) {
+        var fs = require('fs');
+        var path = require('path');
+        var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+        var items = obj['items'];
+        items = $.grep(items, function (e) {
+            return e['item'].id !== id;
+        });
+        obj['items'] = items;
+        var jsonToWrite = JSON.stringify(obj, null, 4);
+        var fileNameToWrite = path.join('data', jsonFileName);
+        fs.writeFile(fileNameToWrite, jsonToWrite, function (err) {
+            if (err)
+                alert(err);
+            reloadImageFile();
+        });
+    }
 }
 
 function displayAllAnswers(jsonFileName) {
