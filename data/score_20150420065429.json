@@ -1,0 +1,24 @@
+{
+    "fileName": "file_20150420065429.png",
+    "scores": [
+        {
+            "lastModified": 1429538478763,
+            "fullScore": 13,
+            "fullMaxScore": 20,
+            "itemScores": [
+                {
+                    "itemid": 1,
+                    "answer": "Gujarat",
+                    "score": 7,
+                    "maxscore": 7
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Uttar Pradesh",
+                    "score": 6,
+                    "maxscore": 13
+                }
+            ]
+        }
+    ]
+}

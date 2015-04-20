@@ -75,11 +75,25 @@
     <Content Include="nw.exe" />
     <Content Include="review.html" />
     <Content Include="scores.html" />
+    <Content Include="screenshots\add_blank.PNG" />
+    <Content Include="screenshots\add_item.PNG" />
+    <Content Include="screenshots\add_with_map.PNG" />
+    <Content Include="screenshots\edit_map.PNG" />
+    <Content Include="screenshots\front_page.PNG" />
+    <Content Include="screenshots\item_added.PNG" />
+    <Content Include="screenshots\review_hints_incur_penalty.PNG" />
+    <Content Include="screenshots\review_map.PNG" />
+    <Content Include="screenshots\review_select_item.PNG" />
+    <Content Include="screenshots\review_show_hint_num_characters.PNG" />
+    <Content Include="screenshots\review_show_hint_reveal_characters.PNG" />
+    <Content Include="screenshots\scores.PNG" />
     <Content Include="test.html" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="LICENSE" />
     <None Include="nw.pak" />
     <None Include="package.json" />
+    <None Include="README.md" />
     <None Include="script.ps1" />
   </ItemGroup>
   <ItemGroup>
