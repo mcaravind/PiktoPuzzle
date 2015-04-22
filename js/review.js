@@ -205,6 +205,65 @@ String.prototype.replaceArray = function (find, replace) {
     return replaceString;
 };
 
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+}
+
+function preselect() {
+    var items = window.items;
+    items = shuffle(items);
+    var elCanvas = document.getElementById("cvsImage");
+    var midX = 0;
+    var midY = 0;
+    $.each(items, function(index, obj) {
+        var value = obj.item;
+        var id = parseInt(value['id']);
+        if ($.inArray(id, window.answeredItemsIds) === -1) {
+            var lines = value['lines'];
+            var ctx = elCanvas.getContext("2d");
+            ctx.beginPath();
+            var vertX = [];
+            var vertY = [];
+            $.each(lines, function(index1, lineItem) {
+                var point1X = lineItem['line'][0];
+                var point1Y = lineItem['line'][1];
+                var point2X = lineItem['line'][2];
+                var point2Y = lineItem['line'][3];
+                if (point1X !== point2X) {
+                    midX = Math.floor((point1X + point2X) / 2);
+                }
+                if (point1Y !== point2Y) {
+                    midY = Math.floor((point1Y + point2Y) / 2);
+                }
+                vertX.push(point1X);
+                vertY.push(point1Y);
+                if (index1 === 0) {
+                    //to make sure you dont jump off the canvas
+                    //to draw the next line
+                    ctx.moveTo(point1X, point1Y);
+                }
+                ctx.lineTo(point2X, point2Y);
+            });
+        }
+    });
+    highlightClickedArea(midX, midY);
+}
+
 function submitAnswer() {
     var actualAnswer = $("#hdnAnswer").html();
     var givenAnswer = $("#answer").val();
@@ -346,6 +405,7 @@ function review_reloadImageFile() {
             max: $("#cvsImage").width()
         });
         review_showWordBoxes(jsonFileName);
+        preselect();
     });
 }
 

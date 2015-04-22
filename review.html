@@ -82,7 +82,12 @@
                     
                 });
             });
-
+            $('#answer').keypress(function (e) {
+                if (e.which === 13) {
+                    submitAnswer();
+                    return false;    //<---- Add this line
+                }
+            });
         });
     </script>
 </head>
