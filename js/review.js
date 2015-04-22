@@ -142,7 +142,6 @@ function highlightClickedArea(canvasX, canvasY) {
                 $("#btnHint").prop("disabled", false);
                 $("#divHint").html('');
                 $("#divPenalty").html('');
-                $('#divCurrScore').html('&nbsp;');
                 ctx.fillStyle = '#adff2f';
                 $("#hdnAnswer").html(value['answer']);
                 $("#hdnHint").html(value['hint']);
@@ -283,7 +282,7 @@ function submitAnswer() {
     var li = $('<li/>', {
         html: actualAnswer + ' Max Score: ' + currItemMaxScore.toString() + '  Your score: '+ currItemScore.toString()
     });
-    $("#divCurrScore").html('Answer:' + actualAnswer + ' Max Score: ' + currItemMaxScore.toString() + '  Your score: ' + currItemScore.toString());
+    $("#divCurrScore").html('Last answer:' + actualAnswer + ' Score:'+currItemScore.toString() + '/' + currItemMaxScore.toString());
     var percentAnswered = Math.floor(window.answeredItemsIds.length * 100 / window.items.length);
     $("#progressBar").css('width', percentAnswered + "%");
     $("#progressText").html(window.answeredItemsIds.length + '/' + window.items.length + ' items answered');
@@ -292,10 +291,7 @@ function submitAnswer() {
     review_reloadImageFile();
     if (window.items.length === window.answeredItemsIds.length) {
         //all items answered, calculate full score
-        var liFinal = $('<li/>', {
-            html: 'Total score: '+window.itemScoreTotal.toString()+"/"+window.itemMaxScoreTotal.toString()
-        });
-        $("#divAnswers").append(liFinal);
+        $("#divFinalScore").html('Total score: '+window.itemScoreTotal.toString()+"/"+window.itemMaxScoreTotal.toString());
         saveScore(window.itemScoreTotal, window.itemMaxScoreTotal);
     }
     $("#btnSubmit").prop("disabled", true);
