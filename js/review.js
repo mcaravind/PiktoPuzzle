@@ -142,6 +142,7 @@ function highlightClickedArea(canvasX, canvasY) {
                 $("#btnHint").prop("disabled", false);
                 $("#divHint").html('');
                 $("#divPenalty").html('');
+                $('#divCurrScore').html('&nbsp;');
                 ctx.fillStyle = '#adff2f';
                 $("#hdnAnswer").html(value['answer']);
                 $("#hdnHint").html(value['hint']);
@@ -212,7 +213,7 @@ function submitAnswer() {
     var numDays = parseInt((Date.now()- lastDateModified) / (24 * 3600 * 1000));
     var scalingFactor = Math.floor(Math.log(numDays+1)/Math.log(2))+1;
     window.answeredItemsIds.push(parseInt($("#hdnItemId").html()));
-    var currItemScore = parseInt((scalingFactor * givenAnswer.trim().length) - dist - window.penalty);
+    var currItemScore = parseInt((scalingFactor * givenAnswer.trim().length) - Math.floor((scalingFactor * 0.75) * (dist + penalty)));
     if (currItemScore < 0) currItemScore = 0;
     var currItemMaxScore = parseInt(actualAnswer.length * scalingFactor);
     window.answeredItemScores.push(currItemScore);
@@ -223,6 +224,7 @@ function submitAnswer() {
     var li = $('<li/>', {
         html: actualAnswer + ' Max Score: ' + currItemMaxScore.toString() + '  Your score: '+ currItemScore.toString()
     });
+    $("#divCurrScore").html('Answer:' + actualAnswer + ' Max Score: ' + currItemMaxScore.toString() + '  Your score: ' + currItemScore.toString());
     var percentAnswered = Math.floor(window.answeredItemsIds.length * 100 / window.items.length);
     $("#progressBar").css('width', percentAnswered + "%");
     $("#progressText").html(window.answeredItemsIds.length + '/' + window.items.length + ' items answered');
