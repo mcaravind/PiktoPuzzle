@@ -220,11 +220,20 @@ function deleteItem(jsonFileName, id) {
     }
 }
 
+function sortByAnswer(a, b) {
+    if (a.item.answer < b.item.answer)
+        return -1;
+    if (a.item.answer > b.item.answer)
+        return 1;
+    return 0;
+}
+
 function displayAllAnswers(jsonFileName) {
     var fs = require('fs');
     var path = require('path');
     var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
     var items = obj['items'];
+    items.sort(sortByAnswer);
     $("#lstAnswers").html('');
     $.each(items, function (index, obj) {
         var clickevent = "deleteItem('" + jsonFileName + "'," + obj['item'].id + ")";
@@ -243,6 +252,10 @@ function newImage() {
 
 function saveAnnotations() {
     var fileName = $("#hdnFileName").html();
+    if ($.trim($("#answer").val()) === '') {
+        alert('Name cannot be blank');
+        return;
+    }
     var answer = $("#answer").val();
     var currHeight = $("#cvsImage").height();
     var leftSliderVal = currHeight - $("#sliderLeft").slider("option", "value");

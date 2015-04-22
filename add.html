@@ -71,7 +71,12 @@
                     handleSliderChanged();
                 }
             });
-            
+            $('#answer').keypress(function (e) {
+                if (e.which === 13) {
+                    saveAnnotations();
+                    return false;    //<---- Add this line
+                }
+            });
         });
     </script>
 </head>

@@ -4,7 +4,7 @@
     var path = require('path');
     var obj = JSON.parse(fs.readFileSync(path.join('data', scoreFileName), 'utf-8'));
     var scores = obj.scores;
-    //var ol = $('<ol/>', {});
+    $("#divScores").html('');
     var table = $('<table/>', {
         class:'table table-striped'
     });
@@ -71,4 +71,18 @@ function scores_getParameterByName(name) //courtesy Artem
         return "";
     else
         return decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+function clearScores() {
+    var scoreFileName = $("#hdnFileName").html();
+    var fs = require('fs');
+    var path = require('path');
+    var obj = JSON.parse(fs.readFileSync(path.join('data', scoreFileName), 'utf-8'));
+    obj.scores=[];
+    var jsonToWrite = JSON.stringify(obj, null, 4);
+    fs.writeFile(path.join('data',scoreFileName), jsonToWrite, function (err) {
+        if (err)
+            alert(err);
+        loadScores();
+    });
 }

@@ -2,187 +2,87 @@
     "fileName": "file_20150418235915.jpg",
     "scores": [
         {
-            "lastModified": 1429496901073,
-            "fullScore": 26,
-            "fullMaxScore": 34,
+            "lastModified": 1429687433058,
+            "fullScore": 67,
+            "fullMaxScore": 90,
             "itemScores": [
                 {
-                    "itemid": 9,
-                    "answer": "Calcutta",
-                    "score": 8,
-                    "maxscore": 8
-                },
-                {
-                    "itemid": 8,
-                    "answer": "Varanasi",
-                    "score": 4,
-                    "maxscore": 8
-                },
-                {
-                    "itemid": 12,
-                    "answer": "Raipur",
-                    "score": 2,
-                    "maxscore": 6
-                },
-                {
-                    "itemid": 10,
-                    "answer": "Mumbai",
-                    "score": 6,
-                    "maxscore": 6
-                },
-                {
-                    "itemid": 11,
-                    "answer": "Panaji",
-                    "score": 6,
-                    "maxscore": 6
-                }
-            ]
-        },
-        {
-            "lastModified": 1429506607400,
-            "fullScore": 28,
-            "fullMaxScore": 34,
-            "itemScores": [
-                {
-                    "itemid": 8,
-                    "answer": "Varanasi",
-                    "score": 5,
-                    "maxscore": 8
-                },
-                {
-                    "itemid": 9,
-                    "answer": "Calcutta",
-                    "score": 8,
-                    "maxscore": 8
-                },
-                {
-                    "itemid": 12,
-                    "answer": "Raipur",
+                    "itemid": 17,
+                    "answer": "Jammu",
                     "score": 3,
-                    "maxscore": 6
+                    "maxscore": 5
                 },
                 {
-                    "itemid": 10,
-                    "answer": "Mumbai",
-                    "score": 6,
-                    "maxscore": 6
+                    "itemid": 20,
+                    "answer": "Bangalore",
+                    "score": 5,
+                    "maxscore": 9
                 },
                 {
                     "itemid": 11,
                     "answer": "Panaji",
-                    "score": 6,
+                    "score": 4,
                     "maxscore": 6
-                }
-            ]
-        },
-        {
-            "lastModified": 1429683323599,
-            "fullScore": 62,
-            "fullMaxScore": 68,
-            "itemScores": [
+                },
                 {
-                    "itemid": 11,
-                    "answer": "Panaji",
-                    "score": 12,
-                    "maxscore": 12
+                    "itemid": 16,
+                    "answer": "Srinagar",
+                    "score": 8,
+                    "maxscore": 8
                 },
                 {
                     "itemid": 12,
                     "answer": "Raipur",
-                    "score": 6,
-                    "maxscore": 12
+                    "score": 5,
+                    "maxscore": 6
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Simla",
+                    "score": 4,
+                    "maxscore": 5
+                },
+                {
+                    "itemid": 13,
+                    "answer": "Chandigarh",
+                    "score": 7,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Agra",
+                    "score": 3,
+                    "maxscore": 4
                 },
                 {
                     "itemid": 8,
                     "answer": "Varanasi",
-                    "score": 16,
-                    "maxscore": 16
+                    "score": 5,
+                    "maxscore": 8
                 },
                 {
-                    "itemid": 10,
-                    "answer": "Mumbai",
-                    "score": 12,
-                    "maxscore": 12
+                    "itemid": 19,
+                    "answer": "Jaipur",
+                    "score": 4,
+                    "maxscore": 6
                 },
                 {
                     "itemid": 9,
                     "answer": "Calcutta",
-                    "score": 16,
-                    "maxscore": 16
-                }
-            ]
-        },
-        {
-            "lastModified": 1429683390096,
-            "fullScore": 61,
-            "fullMaxScore": 68,
-            "itemScores": [
-                {
-                    "itemid": 9,
-                    "answer": "Calcutta",
-                    "score": 16,
-                    "maxscore": 16
+                    "score": 8,
+                    "maxscore": 8
                 },
                 {
                     "itemid": 10,
                     "answer": "Mumbai",
                     "score": 5,
-                    "maxscore": 12
+                    "maxscore": 6
                 },
                 {
-                    "itemid": 8,
-                    "answer": "Varanasi",
-                    "score": 16,
-                    "maxscore": 16
-                },
-                {
-                    "itemid": 12,
-                    "answer": "Raipur",
-                    "score": 12,
-                    "maxscore": 12
-                },
-                {
-                    "itemid": 11,
-                    "answer": "Panaji",
-                    "score": 12,
-                    "maxscore": 12
-                }
-            ]
-        },
-        {
-            "lastModified": 1429683540096,
-            "fullScore": 68,
-            "fullMaxScore": 68,
-            "itemScores": [
-                {
-                    "itemid": 9,
-                    "answer": "Calcutta",
-                    "score": 16,
-                    "maxscore": 16
-                },
-                {
-                    "itemid": 10,
-                    "answer": "Mumbai",
-                    "score": 12,
-                    "maxscore": 12
-                },
-                {
-                    "itemid": 12,
-                    "answer": "Raipur",
-                    "score": 12,
-                    "maxscore": 12
-                },
-                {
-                    "itemid": 11,
-                    "answer": "Panaji",
-                    "score": 12,
-                    "maxscore": 12
-                },
-                {
-                    "itemid": 8,
-                    "answer": "Varanasi",
-                    "score": 16,
-                    "maxscore": 16
+                    "itemid": 18,
+                    "answer": "Allahabad",
+                    "score": 6,
+                    "maxscore": 9
                 }
             ]
         }
