@@ -96,6 +96,35 @@ function getImageFileName(jsonFileName) {
     return imageFileName;
 }
 
+function showMapName(jsonFileName) {
+    var fs = require('fs');
+    var path = require('path');
+    var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+    var originalFileName = obj['originalFileName'];
+    $("#tbxMapName").val(originalFileName);
+}
+
+function handleEditClick() {
+    var buttonText = $("#btnEditName").html();
+    if (buttonText === "Edit") {
+        $("#btnEditName").html("Save");
+        $("#tbxMapName").attr("readonly", false);
+    } else {
+        var jsonFileName = getJsonFileNameFromHiddenField();
+        var fs = require('fs');
+        var path = require('path');
+        var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+        obj['originalFileName'] = $("#tbxMapName").val();
+        var jsonToWrite = JSON.stringify(obj, null, 4);
+        fs.writeFile(path.join('data',jsonFileName), jsonToWrite, function (err) {
+            if (err)
+                alert(err);
+        });
+        $("#btnEditName").html("Edit");
+        $("#tbxMapName").attr("readonly", true);
+    }
+}
+
 function reloadImageFile() {
     var path = require('path');
     var jsonFileName = getJsonFileNameFromHiddenField();
@@ -125,6 +154,7 @@ function reloadImageFile() {
         });
         showWordBoxes(jsonFileName);
         displayAllAnswers(jsonFileName);
+        showMapName(jsonFileName);
     });
 }
 

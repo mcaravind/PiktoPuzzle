@@ -155,6 +155,15 @@
             </div>
             <div class="col-md-3">
                 <button class="btn btn-primary" onclick=" selectFile() ">Select image</button>
+                <div class="row">
+                    <div class="col-md-9" id="divMapName">
+                        <input id="tbxMapName" readonly="true" type="email" class="form-control" id="answer" placeholder="Enter answer">
+                    </div>
+                    <div class="col-md-3" id="divEditButton">
+                        <button id="btnEditName" class="btn btn-primary btn-sm" onclick=" handleEditClick() ">Edit</button>
+                    </div>
+                </div>
+                
                 <input style="display: none;" id="fileDialog" type="file"/>
                 <div class="form-group">
                     <label for="answer">Answer</label>

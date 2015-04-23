@@ -1,5 +1,5 @@
 {
-    "originalFileName": "States-of-India-Map.png",
+    "originalFileName": "India_States",
     "fileName": "file_20150420065429.png",
     "items": [
         {
@@ -197,46 +197,6 @@
                             98,
                             145,
                             98
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "item": {
-                "id": 6,
-                "answer": "Jammu & Kashmir",
-                "lines": [
-                    {
-                        "line": [
-                            162,
-                            44,
-                            162,
-                            20
-                        ]
-                    },
-                    {
-                        "line": [
-                            162,
-                            20,
-                            202,
-                            20
-                        ]
-                    },
-                    {
-                        "line": [
-                            202,
-                            20,
-                            202,
-                            44
-                        ]
-                    },
-                    {
-                        "line": [
-                            202,
-                            44,
-                            162,
-                            44
                         ]
                     }
                 ]
@@ -1121,7 +1081,47 @@
                     }
                 ]
             }
+        },
+        {
+            "item": {
+                "id": 29,
+                "answer": "Jammu and Kashmir",
+                "lines": [
+                    {
+                        "line": [
+                            162,
+                            42,
+                            162,
+                            22
+                        ]
+                    },
+                    {
+                        "line": [
+                            162,
+                            22,
+                            202,
+                            22
+                        ]
+                    },
+                    {
+                        "line": [
+                            202,
+                            22,
+                            202,
+                            42
+                        ]
+                    },
+                    {
+                        "line": [
+                            202,
+                            42,
+                            162,
+                            42
+                        ]
+                    }
+                ]
+            }
         }
     ],
-    "lastModified": 1429679225685
+    "lastModified": 1429768406876
 }
