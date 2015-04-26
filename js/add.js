@@ -34,23 +34,27 @@
             var dateStr = (new Date).yyyymmddHHMMss();
             var fName = "file_" + dateStr;
             var scoreFileName = "score_" + dateStr;
-            var newFileName = path.join('data', fName + '.' + fileType);
-            
-            $("#hdnFileName").html(fName);
-            var jsonToWrite = JSON.stringify({ 'originalFileName': fileName.replace(/^.*[\\\/]/, ''), 'fileName': fName + '.' + fileType, 'items': [] });
-            var newFileJsonName = path.join('data', fName + '.json');
-            fs.appendFile(newFileJsonName, jsonToWrite, function (err) {
-                if (err)
-                    alert(err);
+            var newFileName = path.join('data',dateStr, fName + '.' + fileType);
+            var mkdirp = require('mkdirp');
+            mkdirp(path.join('data', dateStr), function(err) {
+                if (!err) {
+                    $("#hdnFileName").html(fName);
+                    var jsonToWrite = JSON.stringify({ 'originalFileName': fileName.replace(/^.*[\\\/]/, ''), 'fileName': fName + '.' + fileType, 'items': [] });
+                    var newFileJsonName = path.join('data', dateStr, fName + '.json');
+                    fs.appendFile(newFileJsonName, jsonToWrite, function (err) {
+                        if (err)
+                            alert(err);
+                    });
+                    fs.createReadStream(fileName).pipe(fs.createWriteStream(newFileName));
+                    var scoreJsonToWrite = JSON.stringify({ 'fileName': fName + '.' + fileType, 'scores': [] });
+                    var newScoreFileName = path.join('data', dateStr, scoreFileName + '.json');
+                    fs.appendFile(newScoreFileName, scoreJsonToWrite, function (err) {
+                        if (err)
+                            alert(err);
+                    });
+                    newImage();
+                }
             });
-            fs.createReadStream(fileName).pipe(fs.createWriteStream(newFileName));
-            var scoreJsonToWrite = JSON.stringify({'fileName': fName + '.' + fileType, 'scores': [] });
-            var newScoreFileName = path.join('data', scoreFileName + '.json');
-            fs.appendFile(newScoreFileName, scoreJsonToWrite, function (err) {
-                if (err)
-                    alert(err);
-            });
-            newImage();
         });
     });
     chooser.trigger('click');
@@ -59,7 +63,8 @@
 function showWordBoxes(jsonFileName) {
     var fs = require('fs');
     var path = require('path');
-    var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+    var dirName = getDirectoryFromFileName(jsonFileName);
+    var obj = JSON.parse(fs.readFileSync(getFullPath(jsonFileName), 'utf-8'));
     var items = obj['items'];
     var elCanvas = document.getElementById("cvsImage");
     var ctx = elCanvas.getContext("2d");
@@ -91,7 +96,8 @@ function getJsonFileNameFromHiddenField() {
 function getImageFileName(jsonFileName) {
     var fs = require('fs');
     var path = require('path');
-    var obj = JSON.parse(fs.readFileSync(path.join('data',jsonFileName), 'utf-8'));
+    var dirName = getDirectoryFromFileName(jsonFileName);
+    var obj = JSON.parse(fs.readFileSync(getFullPath(jsonFileName), 'utf-8'));
     var imageFileName = obj['fileName'];
     return imageFileName;
 }
@@ -99,7 +105,7 @@ function getImageFileName(jsonFileName) {
 function showMapName(jsonFileName) {
     var fs = require('fs');
     var path = require('path');
-    var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+    var obj = JSON.parse(fs.readFileSync(getFullPath(jsonFileName), 'utf-8'));
     var originalFileName = obj['originalFileName'];
     $("#tbxMapName").val(originalFileName);
 }
@@ -113,10 +119,10 @@ function handleEditClick() {
         var jsonFileName = getJsonFileNameFromHiddenField();
         var fs = require('fs');
         var path = require('path');
-        var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+        var obj = JSON.parse(fs.readFileSync(getFullPath(jsonFileName), 'utf-8'));
         obj['originalFileName'] = $("#tbxMapName").val();
         var jsonToWrite = JSON.stringify(obj, null, 4);
-        fs.writeFile(path.join('data',jsonFileName), jsonToWrite, function (err) {
+        fs.writeFile(getFullPath(jsonFileName), jsonToWrite, function (err) {
             if (err)
                 alert(err);
         });
@@ -129,7 +135,8 @@ function reloadImageFile() {
     var path = require('path');
     var jsonFileName = getJsonFileNameFromHiddenField();
     var imageFileName = getImageFileName(jsonFileName);
-    var fullFileName = path.join("data", imageFileName);
+    var dirName = getDirectoryFromFileName(jsonFileName);
+    var fullFileName = path.join("data",dirName, imageFileName);
     Caman("#cvsImage", fullFileName, function () {
         // manipulate image here
         //this.brightness(5).render();
@@ -234,14 +241,14 @@ function deleteItem(jsonFileName, id) {
     if (confirm('Delete?')) {
         var fs = require('fs');
         var path = require('path');
-        var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+        var obj = JSON.parse(fs.readFileSync(getFullPath(jsonFileName), 'utf-8'));
         var items = obj['items'];
         items = $.grep(items, function (e) {
             return e['item'].id !== id;
         });
         obj['items'] = items;
         var jsonToWrite = JSON.stringify(obj, null, 4);
-        var fileNameToWrite = path.join('data', jsonFileName);
+        var fileNameToWrite = getFullPath(jsonFileName);
         fs.writeFile(fileNameToWrite, jsonToWrite, function (err) {
             if (err)
                 alert(err);
@@ -261,7 +268,7 @@ function sortByAnswer(a, b) {
 function displayAllAnswers(jsonFileName) {
     var fs = require('fs');
     var path = require('path');
-    var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+    var obj = JSON.parse(fs.readFileSync(getFullPath(jsonFileName), 'utf-8'));
     var items = obj['items'];
     items.sort(sortByAnswer);
     $("#lstAnswers").html('');
@@ -282,6 +289,7 @@ function newImage() {
 
 function saveAnnotations() {
     var fileName = $("#hdnFileName").html();
+    var dirName = fileName.split('_')[1];
     if ($.trim($("#answer").val()) === '') {
         alert('Name cannot be blank');
         return;
@@ -299,7 +307,7 @@ function saveAnnotations() {
 
     var fs = require('fs');
     var path = require('path');
-    var jsonFileName = path.join('data', fileName + '.json');
+    var jsonFileName = path.join('data',dirName, fileName + '.json');
     var obj = JSON.parse(fs.readFileSync(jsonFileName, 'utf-8'));
     var ids = $(obj['items']).map(function() {
         return $(this)[0]['item'].id;

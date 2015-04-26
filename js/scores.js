@@ -2,7 +2,7 @@
     var scoreFileName = $("#hdnFileName").html();
     var fs = require('fs');
     var path = require('path');
-    var obj = JSON.parse(fs.readFileSync(path.join('data', scoreFileName), 'utf-8'));
+    var obj = JSON.parse(fs.readFileSync(getFullPath(scoreFileName), 'utf-8'));
     var scores = obj.scores;
     $("#divScores").html('');
     var table = $('<table/>', {
@@ -77,7 +77,7 @@ function clearScores() {
     var scoreFileName = $("#hdnFileName").html();
     var fs = require('fs');
     var path = require('path');
-    var obj = JSON.parse(fs.readFileSync(path.join('data', scoreFileName), 'utf-8'));
+    var obj = JSON.parse(fs.readFileSync(getFullPath(scoreFileName), 'utf-8'));
     obj.scores=[];
     var jsonToWrite = JSON.stringify(obj, null, 4);
     fs.writeFile(path.join('data',scoreFileName), jsonToWrite, function (err) {

@@ -1,7 +1,4 @@
 ﻿function review_showWordBoxes(jsonFileName) {
-    //var fs = require('fs');
-    //var path = require('path');
-    //var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
     var items = window.items;
     var elCanvas = document.getElementById("cvsImage");
     $.each(items, function (index, obj) {
@@ -63,7 +60,7 @@ function loadJsonInMemory() {
     var jsonFileName = review_getJsonFileNameFromHiddenField();
     var fs = require('fs');
     var path = require('path');
-    var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+    var obj = JSON.parse(fs.readFileSync(getFullPath(jsonFileName), 'utf-8'));
     window.items = obj['items'];
     window.lastModified = obj['lastModified'];
     window.answeredItemsIds = [];
@@ -77,7 +74,7 @@ function saveScore(totalScore, maxScore) {
     var scoreFileName = jsonFileName.replace('file_', 'score_');
     var fs = require('fs');
     var path = require('path');
-    var obj = JSON.parse(fs.readFileSync(path.join('data', scoreFileName), 'utf-8'));
+    var obj = JSON.parse(fs.readFileSync(getFullPath(scoreFileName), 'utf-8'));
     var scores = obj['scores'];
     var score = new Object();
     score.lastModified = Date.now();
@@ -102,7 +99,7 @@ function saveScore(totalScore, maxScore) {
     });
     scores.push(score);
     var jsonToWrite = JSON.stringify(obj, null, 4);
-    fs.writeFile(path.join('data',scoreFileName), jsonToWrite, function(err) {
+    fs.writeFile(getFullPath(scoreFileName), jsonToWrite, function(err) {
         if (err)
             alert(err);
     });
@@ -368,7 +365,7 @@ function review_getJsonFileNameFromHiddenField() {
 function review_getImageFileName(jsonFileName) {
     var fs = require('fs');
     var path = require('path');
-    var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+    var obj = JSON.parse(fs.readFileSync(getFullPath(jsonFileName), 'utf-8'));
     var imageFileName = obj['fileName'];
     return imageFileName;
 }
@@ -377,7 +374,8 @@ function review_reloadImageFile() {
     var path = require('path');
     var jsonFileName = review_getJsonFileNameFromHiddenField();
     var imageFileName = review_getImageFileName(jsonFileName);
-    var fullFileName = path.join("data", imageFileName);
+    var dirName = getDirectoryFromFileName(jsonFileName);
+    var fullFileName = path.join("data",dirName, imageFileName);
     Caman("#cvsImage", fullFileName, function () {
         // manipulate image here
         //this.brightness(5).render();

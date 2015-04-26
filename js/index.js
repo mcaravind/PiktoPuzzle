@@ -1,32 +1,33 @@
-﻿function getImageFileName(jsonFileName) {
-    var fs = require('fs');
-    var path = require('path');
-    var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+﻿var fs = require('fs'),
+    path = require('path');
+var gui = require('nw.gui');
+function getImageFileName(jsonFileName) {
+    var dirName = getDirectoryFromFileName(jsonFileName);
+    var obj = JSON.parse(fs.readFileSync(path.join('data',dirName, jsonFileName), 'utf-8'));
     var imageFileName = obj['fileName'];
     return imageFileName;
 }
 
 function getOriginalFileName(jsonFileName) {
-    var fs = require('fs');
-    var path = require('path');
-    var obj = JSON.parse(fs.readFileSync(path.join('data', jsonFileName), 'utf-8'));
+    var dirName = getDirectoryFromFileName(jsonFileName);
+    var obj = JSON.parse(fs.readFileSync(path.join('data',dirName, jsonFileName), 'utf-8'));
     var imageFileName = obj['originalFileName'];
     return imageFileName;
 }
 
 function showScores(fileName) {
-    var gui = require('nw.gui');
     var win = gui.Window.get();
     win.open("scores.html?file=" + fileName);
 }
 
+
+
 function deleteMap(fileName) {
-    var fs = require('fs');
-    var path = require('path');
+    var dirName = getDirectoryFromFileName(fileName);
     var imageFileName = getImageFileName(fileName);
-    var fsImageFile = path.join('data', imageFileName.toString());
-    var fsJsonFile = path.join('data', fileName.toString());
-    var fsScoreFile = path.join('data', fileName.replace('file_', 'score_'));
+    var fsImageFile = path.join('data',dirName, imageFileName.toString());
+    var fsJsonFile = path.join('data',dirName, fileName.toString());
+    var fsScoreFile = path.join('data',dirName, fileName.replace('file_', 'score_'));
     fs.unlinkSync(fsImageFile);
     fs.unlinkSync(fsJsonFile);
     fs.unlinkSync(fsScoreFile);
@@ -34,11 +35,9 @@ function deleteMap(fileName) {
 }
 
 function loadFiles() {
-    var fs = require('fs');
     var EventEmitter = require('events').EventEmitter;
     var filesEE = new EventEmitter();
     var myfiles = [];
-    var path = require('path');
     $("#fileList").html('');
     // this event will be called when all files have been added to myfiles
     filesEE.on('files_ready', function () {
@@ -53,11 +52,12 @@ function loadFiles() {
         var tr = $('<tr/>', {});
         tableEl.append(tr);
         $.each(myfiles, function (index, value) {
+            var dirName = getDirectoryFromFileName(value);
             var td = $('<td/>', {});
             var imageFileNameWithoutPath = getImageFileName(value);
             var scoreFileName = value.replace('file_', 'score_');
             var originalFileName = getOriginalFileName(value);
-            var imageFileName = path.join('data', imageFileNameWithoutPath);
+            var imageFileName = path.join('data',dirName, imageFileNameWithoutPath);
             var divFileName = $('<div/>', {
                 html: '<b>' + originalFileName + '</b>'
             });
@@ -141,16 +141,34 @@ function loadFiles() {
         });
         $("#fileList").append(tableEl);
     });
-    
-    // read all files from current directory
-    fs.readdir('data', function (err, files) {
-        if (err) throw err;
-        files.forEach(function (file) {
-            if (file.substr(-5) === '.json' && file.startsWith('file_')) {
-                myfiles.push(file);
-            }
+
+    var allDirectories = getDirectories('data');
+    var dirCount = allDirectories.length;
+    var count = 0;
+    allDirectories.forEach(function(value) {
+        // read all files from current directory
+        var directory = path.join('data', value);
+        fs.readdir(directory, function (err, files) {
+            if (err) throw err;
+            files.forEach(function (file) {
+                if (file.substr(-5) === '.json' && file.startsWith('file_')) {
+                    myfiles.push(file);
+                }
+            });
+            count += 1;
+            if(count === dirCount)
+                filesEE.emit('files_ready');// trigger files_ready event
         });
-        filesEE.emit('files_ready'); // trigger files_ready event
+    });
+    //$.each(allDirectories, function(index, value) {
+        
+    //});
+    
+}
+
+function getDirectories(srcpath) {
+    return fs.readdirSync(srcpath).filter(function (file) {
+        return fs.statSync(path.join(srcpath, file)).isDirectory();
     });
 }
 
