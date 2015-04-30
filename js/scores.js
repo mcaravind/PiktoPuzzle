@@ -80,7 +80,7 @@ function clearScores() {
     var obj = JSON.parse(fs.readFileSync(getFullPath(scoreFileName), 'utf-8'));
     obj.scores=[];
     var jsonToWrite = JSON.stringify(obj, null, 4);
-    fs.writeFile(path.join('data',scoreFileName), jsonToWrite, function (err) {
+    fs.writeFile(getFullPath(scoreFileName), jsonToWrite, function (err) {
         if (err)
             alert(err);
         loadScores();

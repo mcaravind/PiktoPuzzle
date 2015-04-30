@@ -70,8 +70,9 @@ function showWordBoxes(jsonFileName) {
     var ctx = elCanvas.getContext("2d");
     $.each(items, function (index, obj) {
         var value = obj.item;
+        var disabled = value['disabled'];
         var lines = value['lines'];
-        $.each(lines, function(index1, lineItem) {
+        $.each(lines, function (index1, lineItem) {
             var point1X = lineItem['line'][0];
             var point1Y = lineItem['line'][1];
             var point2X = lineItem['line'][2];
@@ -79,6 +80,11 @@ function showWordBoxes(jsonFileName) {
             ctx.beginPath();
             ctx.moveTo(point1X, point1Y);
             ctx.lineTo(point2X, point2Y);
+            if (disabled === "1") {
+                ctx.setLineDash([5, 2]);
+            } else {
+                ctx.setLineDash([5, 0]);
+            }
             ctx.stroke();
         });
     });
@@ -257,6 +263,42 @@ function deleteItem(jsonFileName, id) {
     }
 }
 
+function disableItem(jsonFileName, id, alreadyDisabled) {
+    var question = '';
+    if (alreadyDisabled) {
+        question = 'Enable?';
+    } else {
+        question = 'Disable?';
+    }
+    if (confirm(question)) {
+        var fs = require('fs');
+        var path = require('path');
+        var obj = JSON.parse(fs.readFileSync(getFullPath(jsonFileName), 'utf-8'));
+        var items = obj['items'];
+        //var item = $.grep(items, function (e) {
+        //    return e['item'].id === id;
+        //});
+        $.each(items, function (index, value) {
+            if (value.item.id === id) {
+                if (!alreadyDisabled) {
+                    value.item.disabled = '1';
+                } else {
+                    delete value.item.disabled;
+                }
+            }
+        });
+        
+        
+        var jsonToWrite = JSON.stringify(obj, null, 4);
+        var fileNameToWrite = getFullPath(jsonFileName);
+        fs.writeFile(fileNameToWrite, jsonToWrite, function (err) {
+            if (err)
+                alert(err);
+            reloadImageFile();
+        });
+    }
+}
+
 function sortByAnswer(a, b) {
     if (a.item.answer < b.item.answer)
         return -1;
@@ -273,12 +315,23 @@ function displayAllAnswers(jsonFileName) {
     items.sort(sortByAnswer);
     $("#lstAnswers").html('');
     $.each(items, function (index, obj) {
-        var clickevent = "deleteItem('" + jsonFileName + "'," + obj['item'].id + ")";
+        var disabled = obj['item'].disabled;
+        var clickevent = "deleteItem('" + jsonFileName + "'," + obj['item'].id +")";
+        var disableClickEvent = "disableItem('" + jsonFileName + "'," + obj['item'].id + "," + disabled + ")";
         var btnId = 'del_' + obj['item'].id;
-        var delButtonHtml = '<button id="'+btnId+'" class="btn btn-danger btn-xs" onclick="' + clickevent + '">Delete</button>';
+        var delButtonHtml = '<button id="' + btnId + '" class="btn btn-danger btn-xs" onclick="' + clickevent + '">Delete</button>';
+        var disableButtonHtml = '';
+        var liBackgroundColor = '#ffffff';
+        if (disabled !== "1") {
+            disableButtonHtml = '<button id="' + btnId + '" class="btn btn-warning btn-xs" onclick="' + disableClickEvent + '">Disable</button>';
+        } else {
+            liBackgroundColor = '#d3d3d3';
+            disableButtonHtml = '<button id="' + btnId + '" class="btn btn-warning btn-xs" onclick="' + disableClickEvent + '">Enable</button>';
+        }
         var li = $('<li/>', {
-            html: delButtonHtml + ' '+ obj['item'].answer
+            html: delButtonHtml + ' ' + disableButtonHtml + ' ' + obj['item'].answer
         });
+        $(li).css('background-color', liBackgroundColor);
         $("#lstAnswers").append(li);
     });
 }

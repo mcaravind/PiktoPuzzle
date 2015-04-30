@@ -1,24 +1,4 @@
 {
     "fileName": "file_20150426004518.png",
-    "scores": [
-        {
-            "lastModified": 1430034539990,
-            "fullScore": 14,
-            "fullMaxScore": 14,
-            "itemScores": [
-                {
-                    "itemid": 2,
-                    "answer": "Ireland",
-                    "score": 7,
-                    "maxscore": 7
-                },
-                {
-                    "itemid": 1,
-                    "answer": "Iceland",
-                    "score": 7,
-                    "maxscore": 7
-                }
-            ]
-        }
-    ]
+    "scores": []
 }

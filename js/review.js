@@ -6,25 +6,28 @@
         var id = parseInt(value['id']);
         if ($.inArray(id, window.answeredItemsIds) === -1) {
             var lines = value['lines'];
-            var ctx = elCanvas.getContext("2d");
-            ctx.beginPath();
-            $.each(lines, function (index1, lineItem) {
-                var point1X = lineItem['line'][0];
-                var point1Y = lineItem['line'][1];
-                var point2X = lineItem['line'][2];
-                var point2Y = lineItem['line'][3];
-                if (index1 === 0) {
-                    //to make sure you dont jump off the canvas
-                    //to draw the next line
-                    ctx.moveTo(point1X, point1Y);
-                }
-                ctx.lineTo(point2X, point2Y);
+            var disabled = value['disabled'];
+            if (disabled !== '1') {
+                var ctx = elCanvas.getContext("2d");
+                ctx.beginPath();
+                $.each(lines, function (index1, lineItem) {
+                    var point1X = lineItem['line'][0];
+                    var point1Y = lineItem['line'][1];
+                    var point2X = lineItem['line'][2];
+                    var point2Y = lineItem['line'][3];
+                    if (index1 === 0) {
+                        //to make sure you dont jump off the canvas
+                        //to draw the next line
+                        ctx.moveTo(point1X, point1Y);
+                    }
+                    ctx.lineTo(point2X, point2Y);
 
-            });
-            ctx.closePath();
-            ctx.fillStyle = '#FFFFFF';
-            ctx.stroke();
-            ctx.fill();
+                });
+                ctx.closePath();
+                ctx.fillStyle = '#FFFFFF';
+                ctx.stroke();
+                ctx.fill();
+            }
         }
     });
 }
@@ -112,44 +115,47 @@ function highlightClickedArea(canvasX, canvasY) {
         var value = obj.item;
         var id = parseInt(value['id']);
         if ($.inArray(id, window.answeredItemsIds) === -1) {
-            var lines = value['lines'];
-            var ctx = elCanvas.getContext("2d");
-            ctx.beginPath();
-            var vertX = [];
-            var vertY = [];
-            $.each(lines, function (index1, lineItem) {
-                var point1X = lineItem['line'][0];
-                var point1Y = lineItem['line'][1];
-                var point2X = lineItem['line'][2];
-                var point2Y = lineItem['line'][3];
-                vertX.push(point1X);
-                vertY.push(point1Y);
-                if (index1 === 0) {
-                    //to make sure you dont jump off the canvas
-                    //to draw the next line
-                    ctx.moveTo(point1X, point1Y);
+            var disabled = value['disabled'];
+            if (disabled !== '1') {
+                var lines = value['lines'];
+                var ctx = elCanvas.getContext("2d");
+                ctx.beginPath();
+                var vertX = [];
+                var vertY = [];
+                $.each(lines, function (index1, lineItem) {
+                    var point1X = lineItem['line'][0];
+                    var point1Y = lineItem['line'][1];
+                    var point2X = lineItem['line'][2];
+                    var point2Y = lineItem['line'][3];
+                    vertX.push(point1X);
+                    vertY.push(point1Y);
+                    if (index1 === 0) {
+                        //to make sure you dont jump off the canvas
+                        //to draw the next line
+                        ctx.moveTo(point1X, point1Y);
+                    }
+                    ctx.lineTo(point2X, point2Y);
+                });
+                if (pnpoly(4, vertX, vertY, canvasX, canvasY)) {
+                    window.penalty = 0;
+                    window.hintNumber = 0;
+                    window.hintPosArray = [];
+                    $("#btnSubmit").prop("disabled", false);
+                    $("#btnHint").prop("disabled", false);
+                    $("#divHint").html('');
+                    $("#divPenalty").html('');
+                    ctx.fillStyle = '#adff2f';
+                    $("#hdnAnswer").html(value['answer']);
+                    $("#hdnHint").html(value['hint']);
+                    $("#hdnItemId").html(value['id']);
+                    $("#hdnDateModified").html(window.lastModified);
+                } else {
+                    ctx.fillStyle = '#FFFFFF';
                 }
-                ctx.lineTo(point2X, point2Y);
-            });
-            if (pnpoly(4, vertX, vertY, canvasX, canvasY)) {
-                window.penalty = 0;
-                window.hintNumber = 0;
-                window.hintPosArray = [];
-                $("#btnSubmit").prop("disabled", false);
-                $("#btnHint").prop("disabled", false);
-                $("#divHint").html('');
-                $("#divPenalty").html('');
-                ctx.fillStyle = '#adff2f';
-                $("#hdnAnswer").html(value['answer']);
-                $("#hdnHint").html(value['hint']);
-                $("#hdnItemId").html(value['id']);
-                $("#hdnDateModified").html(window.lastModified);
-            } else {
-                ctx.fillStyle = '#FFFFFF';
+                ctx.closePath();
+                ctx.stroke();
+                ctx.fill();
             }
-            ctx.closePath();
-            ctx.stroke();
-            ctx.fill();
         }
     });
 }
