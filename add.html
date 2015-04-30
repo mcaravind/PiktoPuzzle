@@ -78,6 +78,19 @@
                     return false;    //<---- Add this line
                 }
             });
+            $('#cvsImage').mousedown(function (event) {
+                var offsetX = event.offsetX;
+                var offsetY = event.offsetY;
+                switch (event.which) {
+                    //case 1:
+                    //    alert('clicked ' + offsetX + ',' + offsetY);
+                    //    break;
+                    case 3:
+                        handleRightClick(offsetX, offsetY);
+                        break;
+                }
+            });
+            add_loadJsonInMemory();
         });
     </script>
 </head>
@@ -162,6 +175,7 @@
                     </div>
                     <div class="col-md-3" id="divEditButton">
                         <button id="btnEditName" class="btn btn-primary btn-sm" onclick=" handleEditClick() ">Edit</button>
+                        
                     </div>
                 </div>
                 
@@ -173,9 +187,12 @@
                 <button class="btn btn-success" onclick=" saveAnnotations() ">Save</button>
                 <br/>
                 <br/>
-                <div id="divAnswers" style="height: 450px;overflow-y:auto">
+                <div id="divAnswers" style="height: 425px; overflow-y: auto">
                     <ol id="lstAnswers"></ol>
                 </div>
+                <br/>
+                <button id="btnDisableAll" class="btn btn-primary btn-xs" onclick=" handleDisableAllClick() ">Disable All</button>
+                <button id="btnEnableAll" class="btn btn-primary btn-xs" onclick=" handleEnableAllClick() ">Enable All</button>
             </div>
         </div>
         <hr>

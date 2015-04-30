@@ -62,9 +62,15 @@ HTMLCanvasElement.prototype.relMouseCoords = relMouseCoords;
 function loadJsonInMemory() {
     var jsonFileName = review_getJsonFileNameFromHiddenField();
     var fs = require('fs');
-    var path = require('path');
     var obj = JSON.parse(fs.readFileSync(getFullPath(jsonFileName), 'utf-8'));
-    window.items = obj['items'];
+    var itemList = [];
+    $.each(obj['items'], function(index, value) {
+        var disabled = value.item.disabled;
+        if (disabled !== '1') {
+            itemList.push(value);
+        }
+    });
+    window.items = itemList;
     window.lastModified = obj['lastModified'];
     window.answeredItemsIds = [];
     window.answeredItemScores = [];
@@ -237,30 +243,33 @@ function preselect() {
         var id = parseInt(value['id']);
         if ($.inArray(id, window.answeredItemsIds) === -1) {
             var lines = value['lines'];
-            var ctx = elCanvas.getContext("2d");
-            ctx.beginPath();
-            var vertX = [];
-            var vertY = [];
-            $.each(lines, function(index1, lineItem) {
-                var point1X = lineItem['line'][0];
-                var point1Y = lineItem['line'][1];
-                var point2X = lineItem['line'][2];
-                var point2Y = lineItem['line'][3];
-                if (point1X !== point2X) {
-                    midX = Math.floor((point1X + point2X) / 2);
-                }
-                if (point1Y !== point2Y) {
-                    midY = Math.floor((point1Y + point2Y) / 2);
-                }
-                vertX.push(point1X);
-                vertY.push(point1Y);
-                if (index1 === 0) {
-                    //to make sure you dont jump off the canvas
-                    //to draw the next line
-                    ctx.moveTo(point1X, point1Y);
-                }
-                ctx.lineTo(point2X, point2Y);
-            });
+            var disabled = value['disabled'];
+            if (disabled !== '1') {
+                var ctx = elCanvas.getContext("2d");
+                ctx.beginPath();
+                var vertX = [];
+                var vertY = [];
+                $.each(lines, function (index1, lineItem) {
+                    var point1X = lineItem['line'][0];
+                    var point1Y = lineItem['line'][1];
+                    var point2X = lineItem['line'][2];
+                    var point2Y = lineItem['line'][3];
+                    if (point1X !== point2X) {
+                        midX = Math.floor((point1X + point2X) / 2);
+                    }
+                    if (point1Y !== point2Y) {
+                        midY = Math.floor((point1Y + point2Y) / 2);
+                    }
+                    vertX.push(point1X);
+                    vertY.push(point1Y);
+                    if (index1 === 0) {
+                        //to make sure you dont jump off the canvas
+                        //to draw the next line
+                        ctx.moveTo(point1X, point1Y);
+                    }
+                    ctx.lineTo(point2X, point2Y);
+                });
+            }
         }
     });
     highlightClickedArea(midX, midY);
@@ -353,16 +362,7 @@ var levDist = function (s, t) {
     return d[n][m];
 }
 
-function pnpoly(nvert, vertx, verty, testx, testy) {
-    var i, j, c = false;
-    for (i = 0, j = nvert - 1; i < nvert; j = i++) {
-        if (((verty[i] > testy) !== (verty[j] > testy)) &&
-            (testx < (vertx[j] - vertx[i]) * (testy - verty[i]) / (verty[j] - verty[i]) + vertx[i])) {
-            c = !c;
-        }
-    }
-    return c;
-}
+
 
 function review_getJsonFileNameFromHiddenField() {
     return $("#hdnFileName").html() + ".json";

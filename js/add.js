@@ -90,11 +90,6 @@ function showWordBoxes(jsonFileName) {
     });
 }
 
-function reloadImageFromFile() {
-    var jsonFileName = getJsonFileNameFromHiddenField();
-    showWordBoxes(jsonFileName);
-}
-
 function getJsonFileNameFromHiddenField() {
     return $("#hdnFileName").html() + ".json";
 }
@@ -137,6 +132,44 @@ function handleEditClick() {
     }
 }
 
+function handleDisableAllClick() {
+    var jsonFileName = getJsonFileNameFromHiddenField();
+    if (confirm('Disable all?')) {
+        var fs = require('fs');
+        var obj = JSON.parse(fs.readFileSync(getFullPath(jsonFileName), 'utf-8'));
+        var items = obj['items'];
+        $.each(items, function (index, value) {
+            value.item.disabled = '1';
+        });
+        var jsonToWrite = JSON.stringify(obj, null, 4);
+        var fileNameToWrite = getFullPath(jsonFileName);
+        fs.writeFile(fileNameToWrite, jsonToWrite, function (err) {
+            if (err)
+                alert(err);
+            reloadImageFile();
+        });
+    }
+}
+
+function handleEnableAllClick() {
+    var jsonFileName = getJsonFileNameFromHiddenField();
+    if (confirm('Enable all?')) {
+        var fs = require('fs');
+        var obj = JSON.parse(fs.readFileSync(getFullPath(jsonFileName), 'utf-8'));
+        var items = obj['items'];
+        $.each(items, function (index, value) {
+            delete value.item.disabled;
+        });
+        var jsonToWrite = JSON.stringify(obj, null, 4);
+        var fileNameToWrite = getFullPath(jsonFileName);
+        fs.writeFile(fileNameToWrite, jsonToWrite, function (err) {
+            if (err)
+                alert(err);
+            reloadImageFile();
+        });
+    }
+}
+
 function reloadImageFile() {
     var path = require('path');
     var jsonFileName = getJsonFileNameFromHiddenField();
@@ -168,6 +201,7 @@ function reloadImageFile() {
         showWordBoxes(jsonFileName);
         displayAllAnswers(jsonFileName);
         showMapName(jsonFileName);
+        add_loadJsonInMemory();
     });
 }
 
@@ -396,3 +430,60 @@ Array.max = function (array) {
 Array.min = function (array) {
     return Math.min.apply(Math, array);
 };
+
+function add_getJsonFileNameFromHiddenField() {
+    return $("#hdnFileName").html() + ".json";
+}
+
+function add_loadJsonInMemory() {
+    var jsonFileName = add_getJsonFileNameFromHiddenField();
+    var fs = require('fs');
+    var obj = JSON.parse(fs.readFileSync(getFullPath(jsonFileName), 'utf-8'));
+    window.items = obj['items'];
+    window.lastModified = obj['lastModified'];
+}
+
+function handleRightClick(canvasX, canvasY) {
+    var items = window.items;
+    $.each(items, function (index, obj) {
+        var value = obj.item;
+        var id = parseInt(value['id']);
+        if ($.inArray(id, window.answeredItemsIds) === -1) {
+            var disabled = value['disabled'];
+            var disabledMenuKeyword = '';
+            if (disabled === '1') {
+                disabledMenuKeyword = 'Enable ';
+            } else {
+                disabledMenuKeyword = 'Disable ';
+            }
+            var lines = value['lines'];
+            var vertX = [];
+            var vertY = [];
+            $.each(lines, function (index1, lineItem) {
+                var point1X = lineItem['line'][0];
+                var point1Y = lineItem['line'][1];
+                vertX.push(point1X);
+                vertY.push(point1Y);
+            });
+            if (pnpoly(4, vertX, vertY, canvasX, canvasY)) {
+                var gui = require('nw.gui'),
+                    menu = new gui.Menu(),
+                    mnuDelete = new gui.MenuItem({
+                        label: "Delete " + value['answer'],
+                        click: function () {
+                            deleteItem(add_getJsonFileNameFromHiddenField(), id);
+                        }
+                    }),
+                    mnuDisable = new gui.MenuItem({
+                        label: disabledMenuKeyword + value['answer'],
+                        click: function () {
+                            disableItem(add_getJsonFileNameFromHiddenField(), id, disabled);
+                        }
+                    });
+                menu.append(mnuDelete);
+                menu.append(mnuDisable);
+                menu.popup(canvasX, canvasY);
+            }
+        }
+    });
+}
