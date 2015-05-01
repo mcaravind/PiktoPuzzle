@@ -279,11 +279,18 @@ function submitAnswer() {
     var actualAnswer = $("#hdnAnswer").html();
     var givenAnswer = $("#answer").val();
     var dist = levDist(actualAnswer.toLowerCase(), givenAnswer.toLowerCase());
+    if (dist < 0) {
+        dist = 0;
+    }
     var lastDateModified = new Date(+$("#hdnDateModified").html());
     var numDays = parseInt((Date.now()- lastDateModified) / (24 * 3600 * 1000));
     var scalingFactor = Math.floor(Math.log(numDays+1)/Math.log(2))+1;
     window.answeredItemsIds.push(parseInt($("#hdnItemId").html()));
-    var currItemScore = parseInt((scalingFactor * givenAnswer.trim().length) - Math.floor((scalingFactor * 0.75) * (dist + penalty)));
+    var givenAnswerScoreLength = givenAnswer.trim().length;
+    if (givenAnswerScoreLength > actualAnswer.length) {
+        givenAnswerScoreLength = actualAnswer.length;
+    }
+    var currItemScore = parseInt((scalingFactor * givenAnswerScoreLength) - Math.floor((scalingFactor * 0.75) * (dist + penalty)));
     if (currItemScore < 0) currItemScore = 0;
     var currItemMaxScore = parseInt(actualAnswer.length * scalingFactor);
     window.answeredItemScores.push(currItemScore);

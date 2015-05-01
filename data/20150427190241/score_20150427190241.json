@@ -309,6 +309,212 @@
                     "maxscore": 14
                 }
             ]
+        },
+        {
+            "lastModified": 1430441320198,
+            "fullScore": 326,
+            "fullMaxScore": 326,
+            "itemScores": [
+                {
+                    "itemid": 32,
+                    "answer": "Georgia",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 38,
+                    "answer": "Massachusetts",
+                    "score": 23,
+                    "maxscore": 26
+                },
+                {
+                    "itemid": 42,
+                    "answer": "Virginia",
+                    "score": 19,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 34,
+                    "answer": "North Carolina",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 45,
+                    "answer": "New Jersey",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 41,
+                    "answer": "Pennsylvania",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 40,
+                    "answer": "New York",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 39,
+                    "answer": "Maine",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 46,
+                    "answer": "Delaware",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 47,
+                    "answer": "Maryland",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 36,
+                    "answer": "New Hampshire",
+                    "score": 26,
+                    "maxscore": 26
+                },
+                {
+                    "itemid": 44,
+                    "answer": "Connecticut",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 43,
+                    "answer": "Rhode Island",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 48,
+                    "answer": "West Virginia",
+                    "score": 26,
+                    "maxscore": 26
+                },
+                {
+                    "itemid": 37,
+                    "answer": "Vermont",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 35,
+                    "answer": "South Carolina",
+                    "score": 28,
+                    "maxscore": 28
+                }
+            ]
+        },
+        {
+            "lastModified": 1430453523487,
+            "fullScore": 462,
+            "fullMaxScore": 489,
+            "itemScores": [
+                {
+                    "itemid": 41,
+                    "answer": "Pennsylvania",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 42,
+                    "answer": "Virginia",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 36,
+                    "answer": "New Hampshire",
+                    "score": 39,
+                    "maxscore": 39
+                },
+                {
+                    "itemid": 43,
+                    "answer": "Rhode Island",
+                    "score": 9,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 35,
+                    "answer": "South Carolina",
+                    "score": 42,
+                    "maxscore": 42
+                },
+                {
+                    "itemid": 46,
+                    "answer": "Delaware",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 40,
+                    "answer": "New York",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 48,
+                    "answer": "West Virginia",
+                    "score": 39,
+                    "maxscore": 39
+                },
+                {
+                    "itemid": 37,
+                    "answer": "Vermont",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 34,
+                    "answer": "North Carolina",
+                    "score": 42,
+                    "maxscore": 42
+                },
+                {
+                    "itemid": 38,
+                    "answer": "Massachusetts",
+                    "score": 39,
+                    "maxscore": 39
+                },
+                {
+                    "itemid": 44,
+                    "answer": "Connecticut",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 39,
+                    "answer": "Maine",
+                    "score": 15,
+                    "maxscore": 15
+                },
+                {
+                    "itemid": 32,
+                    "answer": "Georgia",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 47,
+                    "answer": "Maryland",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 45,
+                    "answer": "New Jersey",
+                    "score": 30,
+                    "maxscore": 30
+                }
+            ]
         }
     ]
 }
