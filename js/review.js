@@ -301,7 +301,8 @@ function submitAnswer() {
     var li = $('<li/>', {
         html: actualAnswer + ' Max Score: ' + currItemMaxScore.toString() + '  Your score: '+ currItemScore.toString()
     });
-    $("#divCurrScore").html('Last answer:' + actualAnswer + ' Score:'+currItemScore.toString() + '/' + currItemMaxScore.toString());
+    $("#divLastAnswer").html('Your answer: ' + givenAnswer + ' Actual answer: ' + actualAnswer);
+    $("#divCurrFullScore").html('Last answer score: ' + currItemScore.toString() + '/' + currItemMaxScore.toString()+' Current score: '+itemScoreTotal.toString()+'/'+itemMaxScoreTotal.toString());
     var percentAnswered = Math.floor(window.answeredItemsIds.length * 100 / window.items.length);
     $("#progressBar").css('width', percentAnswered + "%");
     $("#progressText").html(window.answeredItemsIds.length + '/' + window.items.length + ' items answered');

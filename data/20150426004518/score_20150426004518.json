@@ -840,6 +840,423 @@
                     "maxscore": 14
                 }
             ]
+        },
+        {
+            "lastModified": 1430716685601,
+            "fullScore": 478,
+            "fullMaxScore": 513,
+            "itemScores": [
+                {
+                    "itemid": 39,
+                    "answer": "Greece",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Switzerland",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 19,
+                    "answer": "Lithuania",
+                    "score": 27,
+                    "maxscore": 27
+                },
+                {
+                    "itemid": 11,
+                    "answer": "Denmark",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 36,
+                    "answer": "Moldova",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Hungary",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 32,
+                    "answer": "Macedonia",
+                    "score": 27,
+                    "maxscore": 27
+                },
+                {
+                    "itemid": 30,
+                    "answer": "Albania",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 28,
+                    "answer": "Croatia",
+                    "score": 3,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Austria",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 35,
+                    "answer": "Romania",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 20,
+                    "answer": "Latvia",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 33,
+                    "answer": "Serbia",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Slovenia",
+                    "score": 13,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Holland",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 31,
+                    "answer": "Montenegro",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 18,
+                    "answer": "Estonia",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 26,
+                    "answer": "Slovakia",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 34,
+                    "answer": "Bulgaria",
+                    "score": 18,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 25,
+                    "answer": "Czech Republic",
+                    "score": 42,
+                    "maxscore": 42
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Belgium",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 29,
+                    "answer": "Bosnia",
+                    "score": 18,
+                    "maxscore": 18
+                }
+            ]
+        },
+        {
+            "lastModified": 1430716849857,
+            "fullScore": 513,
+            "fullMaxScore": 513,
+            "itemScores": [
+                {
+                    "itemid": 19,
+                    "answer": "Lithuania",
+                    "score": 27,
+                    "maxscore": 27
+                },
+                {
+                    "itemid": 34,
+                    "answer": "Bulgaria",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 18,
+                    "answer": "Estonia",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Hungary",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 25,
+                    "answer": "Czech Republic",
+                    "score": 42,
+                    "maxscore": 42
+                },
+                {
+                    "itemid": 11,
+                    "answer": "Denmark",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 36,
+                    "answer": "Moldova",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Switzerland",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 26,
+                    "answer": "Slovakia",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 35,
+                    "answer": "Romania",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 20,
+                    "answer": "Latvia",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 30,
+                    "answer": "Albania",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Austria",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 29,
+                    "answer": "Bosnia",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 39,
+                    "answer": "Greece",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Slovenia",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 31,
+                    "answer": "Montenegro",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 28,
+                    "answer": "Croatia",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 33,
+                    "answer": "Serbia",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 32,
+                    "answer": "Macedonia",
+                    "score": 27,
+                    "maxscore": 27
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Belgium",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Holland",
+                    "score": 21,
+                    "maxscore": 21
+                }
+            ]
+        },
+        {
+            "lastModified": 1430717044618,
+            "fullScore": 513,
+            "fullMaxScore": 513,
+            "itemScores": [
+                {
+                    "itemid": 7,
+                    "answer": "Belgium",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 20,
+                    "answer": "Latvia",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 28,
+                    "answer": "Croatia",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 11,
+                    "answer": "Denmark",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 26,
+                    "answer": "Slovakia",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 19,
+                    "answer": "Lithuania",
+                    "score": 27,
+                    "maxscore": 27
+                },
+                {
+                    "itemid": 34,
+                    "answer": "Bulgaria",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Switzerland",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 30,
+                    "answer": "Albania",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 36,
+                    "answer": "Moldova",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 31,
+                    "answer": "Montenegro",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 32,
+                    "answer": "Macedonia",
+                    "score": 27,
+                    "maxscore": 27
+                },
+                {
+                    "itemid": 25,
+                    "answer": "Czech Republic",
+                    "score": 42,
+                    "maxscore": 42
+                },
+                {
+                    "itemid": 33,
+                    "answer": "Serbia",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Slovenia",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 18,
+                    "answer": "Estonia",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 35,
+                    "answer": "Romania",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Hungary",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Austria",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 39,
+                    "answer": "Greece",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 29,
+                    "answer": "Bosnia",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Holland",
+                    "score": 21,
+                    "maxscore": 21
+                }
+            ]
         }
     ]
 }
