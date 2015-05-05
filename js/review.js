@@ -79,13 +79,14 @@ function loadJsonInMemory() {
 }
 
 function saveScore(totalScore, maxScore) {
+    var totalSeconds = Math.floor((new Date() - window.startTime)/1000);
     var jsonFileName = review_getJsonFileNameFromHiddenField();
     var scoreFileName = jsonFileName.replace('file_', 'score_');
     var fs = require('fs');
-    var path = require('path');
     var obj = JSON.parse(fs.readFileSync(getFullPath(scoreFileName), 'utf-8'));
     var scores = obj['scores'];
     var score = new Object();
+    score.totalSeconds = totalSeconds;
     score.lastModified = Date.now();
     score.fullScore = totalScore;
     score.fullMaxScore = maxScore;
@@ -313,6 +314,7 @@ function submitAnswer() {
         //all items answered, calculate full score
         $("#divFinalScore").html('Total score: '+window.itemScoreTotal.toString()+"/"+window.itemMaxScoreTotal.toString());
         saveScore(window.itemScoreTotal, window.itemMaxScoreTotal);
+        $("#answer").prop("disabled", true);
     }
     $("#btnSubmit").prop("disabled", true);
     $("#btnHint").prop("disabled", true);

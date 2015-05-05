@@ -17,13 +17,16 @@
     var thDate = $('<th/>', {
         html:'Date'
     });
+    var thTime = $('<th/>', {
+        html:'Time(s)'
+    });
     var thScore = $('<th/>', {
         html:'Score'
     });
     var thChart = $('<th/>', {
         html:'Chart'
     });
-    theadtr.append(thnum).append(thDate).append(thScore).append(thChart);
+    theadtr.append(thnum).append(thDate).append(thTime).append(thScore).append(thChart);
     thead.append(theadtr);
     table.append(thead);
     $.each(scores, function (index, item) {
@@ -34,6 +37,9 @@
         });
         var tdDate = $('<td/>', {
             html:lastDateModified.toLocaleDateString()+' '+lastDateModified.toLocaleTimeString()
+        });
+        var tdTime = $('<td/>', {
+            html:item.totalSeconds
         });
         var tdScore = $('<td>', {
             html:item.fullScore+'/'+item.fullMaxScore
@@ -55,7 +61,7 @@
         var tdChart = $('<td/>', {
         });
         tdChart.append(progressBarOutside);
-        tr.append(tdNum).append(tdDate).append(tdScore).append(tdChart);
+        tr.append(tdNum).append(tdDate).append(tdTime).append(tdScore).append(tdChart);
         table.append(tr);
     });
     $("#divScores").append(table);
