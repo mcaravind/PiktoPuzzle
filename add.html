@@ -81,12 +81,14 @@
             $('#cvsImage').mousedown(function (event) {
                 var offsetX = event.offsetX;
                 var offsetY = event.offsetY;
+                var rect = document.getElementById('cvsImage').getBoundingClientRect();
+                
                 switch (event.which) {
                     //case 1:
                     //    alert('clicked ' + offsetX + ',' + offsetY);
                     //    break;
                     case 3:
-                        handleRightClick(offsetX, offsetY);
+                        handleRightClick(offsetX, offsetY, rect);
                         break;
                 }
             });

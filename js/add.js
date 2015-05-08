@@ -443,7 +443,7 @@ function add_loadJsonInMemory() {
     window.lastModified = obj['lastModified'];
 }
 
-function handleRightClick(canvasX, canvasY) {
+function handleRightClick(canvasX, canvasY, rect) {
     var items = window.items;
     $.each(items, function (index, obj) {
         var value = obj.item;
@@ -482,7 +482,7 @@ function handleRightClick(canvasX, canvasY) {
                     });
                 menu.append(mnuDelete);
                 menu.append(mnuDisable);
-                menu.popup(canvasX, canvasY);
+                menu.popup(canvasX+rect.left, canvasY+rect.top);
             }
         }
     });
