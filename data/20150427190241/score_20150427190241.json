@@ -1,4 +1,1315 @@
 {
     "fileName": "file_20150427190241.png",
-    "scores": []
+    "scores": [
+        {
+            "totalSeconds": 79,
+            "lastModified": 1431062530138,
+            "fullScore": 436,
+            "fullMaxScore": 436,
+            "itemScores": [
+                {
+                    "itemid": 19,
+                    "answer": "Iowa",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 20,
+                    "answer": "Missouri",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Indiana",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 31,
+                    "answer": "Tennessee",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 29,
+                    "answer": "Ohio",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 18,
+                    "answer": "Minnesota",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 30,
+                    "answer": "Kentucky",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 21,
+                    "answer": "Arkansas",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 28,
+                    "answer": "Michigan",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Alabama",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Mississippi",
+                    "score": 44,
+                    "maxscore": 44
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Louisiana",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 26,
+                    "answer": "Illinois",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 25,
+                    "answer": "Wisconsin",
+                    "score": 36,
+                    "maxscore": 36
+                }
+            ]
+        },
+        {
+            "totalSeconds": 93,
+            "lastModified": 1431062704185,
+            "fullScore": 524,
+            "fullMaxScore": 524,
+            "itemScores": [
+                {
+                    "itemid": 2,
+                    "answer": "Oregon",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Nebraska",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Washington",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Oklahoma",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Nevada",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 13,
+                    "answer": "South Dakota",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Arizona",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 17,
+                    "answer": "Texas",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Idaho",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Wyoming",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Colorado",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 4,
+                    "answer": "California",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 11,
+                    "answer": "New Mexico",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Kansas",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Montana",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Utah",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 12,
+                    "answer": "North Dakota",
+                    "score": 48,
+                    "maxscore": 48
+                }
+            ]
+        },
+        {
+            "totalSeconds": 63,
+            "lastModified": 1431062781417,
+            "fullScore": 524,
+            "fullMaxScore": 524,
+            "itemScores": [
+                {
+                    "itemid": 10,
+                    "answer": "Colorado",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Idaho",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 13,
+                    "answer": "South Dakota",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 17,
+                    "answer": "Texas",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 4,
+                    "answer": "California",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Arizona",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Kansas",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Oklahoma",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Montana",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Nevada",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Washington",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Utah",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Nebraska",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Oregon",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 12,
+                    "answer": "North Dakota",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 11,
+                    "answer": "New Mexico",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Wyoming",
+                    "score": 28,
+                    "maxscore": 28
+                }
+            ]
+        },
+        {
+            "totalSeconds": 73,
+            "lastModified": 1431133987125,
+            "fullScore": 524,
+            "fullMaxScore": 524,
+            "itemScores": [
+                {
+                    "itemid": 3,
+                    "answer": "Nevada",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 12,
+                    "answer": "North Dakota",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 4,
+                    "answer": "California",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Oklahoma",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Colorado",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Kansas",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Wyoming",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 17,
+                    "answer": "Texas",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Arizona",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Washington",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 13,
+                    "answer": "South Dakota",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Utah",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Oregon",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Idaho",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Nebraska",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Montana",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 11,
+                    "answer": "New Mexico",
+                    "score": 40,
+                    "maxscore": 40
+                }
+            ]
+        },
+        {
+            "totalSeconds": 314,
+            "lastModified": 1431134313405,
+            "fullScore": 1591,
+            "fullMaxScore": 1640,
+            "itemScores": [
+                {
+                    "itemid": 11,
+                    "answer": "New Mexico",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 32,
+                    "answer": "Georgia",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 26,
+                    "answer": "Illinois",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 48,
+                    "answer": "West Virginia",
+                    "score": 52,
+                    "maxscore": 52
+                },
+                {
+                    "itemid": 45,
+                    "answer": "New Jersey",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Wyoming",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Nebraska",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 40,
+                    "answer": "New York",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Indiana",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 39,
+                    "answer": "Maine",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Washington",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 21,
+                    "answer": "Arkansas",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 29,
+                    "answer": "Ohio",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Utah",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 35,
+                    "answer": "South Carolina",
+                    "score": 56,
+                    "maxscore": 56
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Colorado",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 30,
+                    "answer": "Kentucky",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 43,
+                    "answer": "Rhode Island",
+                    "score": 5,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Idaho",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Alabama",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 44,
+                    "answer": "Connecticut",
+                    "score": 44,
+                    "maxscore": 44
+                },
+                {
+                    "itemid": 19,
+                    "answer": "Iowa",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 25,
+                    "answer": "Wisconsin",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 46,
+                    "answer": "Delaware",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 12,
+                    "answer": "North Dakota",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 28,
+                    "answer": "Michigan",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 41,
+                    "answer": "Pennsylvania",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Kansas",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 18,
+                    "answer": "Minnesota",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 37,
+                    "answer": "Vermont",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 31,
+                    "answer": "Tennessee",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Oklahoma",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Oregon",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Mississippi",
+                    "score": 44,
+                    "maxscore": 44
+                },
+                {
+                    "itemid": 20,
+                    "answer": "Missouri",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 47,
+                    "answer": "Maryland",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Arizona",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Louisiana",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 33,
+                    "answer": "Florida",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 42,
+                    "answer": "Virginia",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Nevada",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 17,
+                    "answer": "Texas",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 36,
+                    "answer": "New Hampshire",
+                    "score": 52,
+                    "maxscore": 52
+                },
+                {
+                    "itemid": 4,
+                    "answer": "California",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 13,
+                    "answer": "South Dakota",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Montana",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 34,
+                    "answer": "North Carolina",
+                    "score": 56,
+                    "maxscore": 56
+                },
+                {
+                    "itemid": 38,
+                    "answer": "Massachusetts",
+                    "score": 46,
+                    "maxscore": 52
+                }
+            ]
+        },
+        {
+            "totalSeconds": 1104,
+            "lastModified": 1431140843349,
+            "fullScore": 1415,
+            "fullMaxScore": 1640,
+            "itemScores": [
+                {
+                    "itemid": 43,
+                    "answer": "Rhode Island",
+                    "score": 45,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 18,
+                    "answer": "Minnesota",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 17,
+                    "answer": "Texas",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Oklahoma",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 29,
+                    "answer": "Ohio",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Wyoming",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Indiana",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 46,
+                    "answer": "Delaware",
+                    "score": 14,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 28,
+                    "answer": "Michigan",
+                    "score": 29,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Alabama",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 13,
+                    "answer": "South Dakota",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Louisiana",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 26,
+                    "answer": "Illinois",
+                    "score": 23,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 35,
+                    "answer": "South Carolina",
+                    "score": 56,
+                    "maxscore": 56
+                },
+                {
+                    "itemid": 48,
+                    "answer": "West Virginia",
+                    "score": 52,
+                    "maxscore": 52
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Montana",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 39,
+                    "answer": "Maine",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 31,
+                    "answer": "Tennessee",
+                    "score": 29,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 38,
+                    "answer": "Massachusetts",
+                    "score": 0,
+                    "maxscore": 52
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Washington",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Kansas",
+                    "score": 6,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 4,
+                    "answer": "California",
+                    "score": 37,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 21,
+                    "answer": "Arkansas",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 30,
+                    "answer": "Kentucky",
+                    "score": 7,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 45,
+                    "answer": "New Jersey",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 41,
+                    "answer": "Pennsylvania",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Utah",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 19,
+                    "answer": "Iowa",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 42,
+                    "answer": "Virginia",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 40,
+                    "answer": "New York",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Nevada",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Nebraska",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 34,
+                    "answer": "North Carolina",
+                    "score": 0,
+                    "maxscore": 56
+                },
+                {
+                    "itemid": 37,
+                    "answer": "Vermont",
+                    "score": 0,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Colorado",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Idaho",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Oregon",
+                    "score": 21,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 25,
+                    "answer": "Wisconsin",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 47,
+                    "answer": "Maryland",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 36,
+                    "answer": "New Hampshire",
+                    "score": 52,
+                    "maxscore": 52
+                },
+                {
+                    "itemid": 12,
+                    "answer": "North Dakota",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 32,
+                    "answer": "Georgia",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 11,
+                    "answer": "New Mexico",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 20,
+                    "answer": "Missouri",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Arizona",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Mississippi",
+                    "score": 44,
+                    "maxscore": 44
+                },
+                {
+                    "itemid": 33,
+                    "answer": "Florida",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 44,
+                    "answer": "Connecticut",
+                    "score": 44,
+                    "maxscore": 44
+                }
+            ]
+        },
+        {
+            "totalSeconds": 414,
+            "lastModified": 1431141675167,
+            "fullScore": 1565,
+            "fullMaxScore": 1640,
+            "itemScores": [
+                {
+                    "itemid": 8,
+                    "answer": "Montana",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Oklahoma",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 17,
+                    "answer": "Texas",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Oregon",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 29,
+                    "answer": "Ohio",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 30,
+                    "answer": "Kentucky",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 19,
+                    "answer": "Iowa",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Utah",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 36,
+                    "answer": "New Hampshire",
+                    "score": 52,
+                    "maxscore": 52
+                },
+                {
+                    "itemid": 43,
+                    "answer": "Rhode Island",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 21,
+                    "answer": "Arkansas",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 37,
+                    "answer": "Vermont",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 38,
+                    "answer": "Massachusetts",
+                    "score": 52,
+                    "maxscore": 52
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Colorado",
+                    "score": 7,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 12,
+                    "answer": "North Dakota",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Arizona",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 46,
+                    "answer": "Delaware",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Nevada",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 26,
+                    "answer": "Illinois",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 11,
+                    "answer": "New Mexico",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 32,
+                    "answer": "Georgia",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 13,
+                    "answer": "South Dakota",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 42,
+                    "answer": "Virginia",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Louisiana",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 41,
+                    "answer": "Pennsylvania",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Mississippi",
+                    "score": 44,
+                    "maxscore": 44
+                },
+                {
+                    "itemid": 20,
+                    "answer": "Missouri",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 47,
+                    "answer": "Maryland",
+                    "score": 0,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Alabama",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Indiana",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Nebraska",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Kansas",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 18,
+                    "answer": "Minnesota",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 34,
+                    "answer": "North Carolina",
+                    "score": 56,
+                    "maxscore": 56
+                },
+                {
+                    "itemid": 31,
+                    "answer": "Tennessee",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 35,
+                    "answer": "South Carolina",
+                    "score": 56,
+                    "maxscore": 56
+                },
+                {
+                    "itemid": 40,
+                    "answer": "New York",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Washington",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 45,
+                    "answer": "New Jersey",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 33,
+                    "answer": "Florida",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 44,
+                    "answer": "Connecticut",
+                    "score": 44,
+                    "maxscore": 44
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Idaho",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Wyoming",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 25,
+                    "answer": "Wisconsin",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 39,
+                    "answer": "Maine",
+                    "score": 2,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 48,
+                    "answer": "West Virginia",
+                    "score": 52,
+                    "maxscore": 52
+                },
+                {
+                    "itemid": 28,
+                    "answer": "Michigan",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 4,
+                    "answer": "California",
+                    "score": 40,
+                    "maxscore": 40
+                }
+            ]
+        }
+    ]
 }
