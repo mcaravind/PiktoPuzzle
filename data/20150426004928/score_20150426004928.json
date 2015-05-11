@@ -1,4 +1,181 @@
 {
     "fileName": "file_20150426004928.png",
-    "scores": []
+    "scores": [
+        {
+            "totalSeconds": 172,
+            "lastModified": 1431319402523,
+            "fullScore": 1016,
+            "fullMaxScore": 1048,
+            "itemScores": [
+                {
+                    "itemid": 6,
+                    "answer": "Punjab",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Sikkim",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Haryana",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 13,
+                    "answer": "Kerala",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 12,
+                    "answer": "Karnataka",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 28,
+                    "answer": "Nagaland",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Jammu and Kashmir",
+                    "score": 68,
+                    "maxscore": 68
+                },
+                {
+                    "itemid": 25,
+                    "answer": "Mizoram",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Meghalaya",
+                    "score": 4,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Bihar",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Tripura",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Rajasthan",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Assam",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 18,
+                    "answer": "Andhra Pradesh",
+                    "score": 56,
+                    "maxscore": 56
+                },
+                {
+                    "itemid": 20,
+                    "answer": "Jharkhand",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Madhya Pradesh",
+                    "score": 56,
+                    "maxscore": 56
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Tamil Nadu",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 11,
+                    "answer": "Maharashtra",
+                    "score": 44,
+                    "maxscore": 44
+                },
+                {
+                    "itemid": 26,
+                    "answer": "Arunachal Pradesh",
+                    "score": 68,
+                    "maxscore": 68
+                },
+                {
+                    "itemid": 4,
+                    "answer": "Uttarakhand",
+                    "score": 44,
+                    "maxscore": 44
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Goa",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 19,
+                    "answer": "Odisha",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Gujarat",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Himachal Pradesh",
+                    "score": 64,
+                    "maxscore": 64
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Manipur",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 17,
+                    "answer": "Uttar Pradesh",
+                    "score": 52,
+                    "maxscore": 52
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Chhattisgarh",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 21,
+                    "answer": "West Bengal",
+                    "score": 44,
+                    "maxscore": 44
+                }
+            ]
+        }
+    ]
 }
