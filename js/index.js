@@ -64,11 +64,11 @@ function loadFiles() {
             $(divFileName).css('text-align', 'center');
             $(divFileName).css('width', '300px');
             var divThumb = $('<div/>', {
-                class: 'col-lg-4'
+                "class": 'col-lg-4'
             });
 
             var aThumb = $('<a/>', {
-                class:'thumbnail'
+                "class":"thumbnail"
             });
             $(aThumb).css('width', '300px');
             var imgThumb = $('<img/>', {
@@ -122,7 +122,6 @@ function loadFiles() {
             divThumb.append(divTag);
             divThumb.append(aThumb);
             divThumb.append(divFileName);
-            //$("#fileList").append(divThumb);
             td.append(divThumb);
             tr.append(td);
             if ((index + 1) % 3 === 0) {
@@ -160,10 +159,6 @@ function loadFiles() {
                 filesEE.emit('files_ready');// trigger files_ready event
         });
     });
-    //$.each(allDirectories, function(index, value) {
-        
-    //});
-    
 }
 
 function getDirectories(srcpath) {

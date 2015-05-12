@@ -87,6 +87,7 @@ function saveScore(totalScore, maxScore) {
     var scores = obj['scores'];
     var score = new Object();
     score.totalSeconds = totalSeconds;
+    var totalCharacters = 0;
     score.lastModified = Date.now();
     score.fullScore = totalScore;
     score.fullMaxScore = maxScore;
@@ -100,6 +101,7 @@ function saveScore(totalScore, maxScore) {
         var itemScore = answeredItemScores[index];
         var itemMaxScore = answeredItemMaxScores[index];
         var answer = answeredItems[index];
+        totalCharacters += answer.length;
         var itemScoreObj = new Object();
         itemScoreObj.itemid = itemid;
         itemScoreObj.answer = answer;
@@ -107,6 +109,7 @@ function saveScore(totalScore, maxScore) {
         itemScoreObj.maxscore = itemMaxScore;
         score.itemScores.push(itemScoreObj);
     });
+    score.charactersPerSecond = totalCharacters/totalSeconds;
     scores.push(score);
     var jsonToWrite = JSON.stringify(obj, null, 4);
     fs.writeFile(getFullPath(scoreFileName), jsonToWrite, function(err) {

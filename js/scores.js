@@ -23,10 +23,13 @@
     var thScore = $('<th/>', {
         html:'Score'
     });
+    var thSpeed = $('<th/>', {
+        html:'Speed (chars/sec)'
+    });
     var thChart = $('<th/>', {
         html:'Chart'
     });
-    theadtr.append(thnum).append(thDate).append(thTime).append(thScore).append(thChart);
+    theadtr.append(thnum).append(thDate).append(thTime).append(thScore).append(thSpeed).append(thChart);
     thead.append(theadtr);
     table.append(thead);
     $.each(scores, function (index, item) {
@@ -43,6 +46,9 @@
         });
         var tdScore = $('<td>', {
             html:item.fullScore+'/'+item.fullMaxScore
+        });
+        var tdSpeed = $('<td/>', {
+            html:(+(item.charactersPerSecond||0).toFixed(2)).toString()
         });
         var progressBarOutside = $('<div/>', {
             'class':'progress'
@@ -61,7 +67,7 @@
         var tdChart = $('<td/>', {
         });
         tdChart.append(progressBarOutside);
-        tr.append(tdNum).append(tdDate).append(tdTime).append(tdScore).append(tdChart);
+        tr.append(tdNum).append(tdDate).append(tdTime).append(tdScore).append(tdSpeed).append(tdChart);
         table.append(tr);
     });
     $("#divScores").append(table);

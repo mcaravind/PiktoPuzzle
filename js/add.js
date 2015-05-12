@@ -122,6 +122,7 @@ function handleEditClick() {
         var path = require('path');
         var obj = JSON.parse(fs.readFileSync(getFullPath(jsonFileName), 'utf-8'));
         obj['originalFileName'] = $("#tbxMapName").val();
+        obj['lastModified'] = Date.now();
         var jsonToWrite = JSON.stringify(obj, null, 4);
         fs.writeFile(getFullPath(jsonFileName), jsonToWrite, function (err) {
             if (err)
