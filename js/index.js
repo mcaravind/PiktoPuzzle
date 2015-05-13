@@ -57,12 +57,52 @@ function loadFiles() {
             var imageFileNameWithoutPath = getImageFileName(value);
             var scoreFileName = value.replace('file_', 'score_');
             var originalFileName = getOriginalFileName(value);
-            var imageFileName = path.join('data',dirName, imageFileNameWithoutPath);
+            var imageFileName = path.join('data', dirName, imageFileNameWithoutPath);
+
+            var obj = JSON.parse(fs.readFileSync(getFullPath(scoreFileName), 'utf-8'));
+            var scores = obj.scores;
+            var dayArray = [];
+            $.each(scores, function (index, item) {
+                //incomplete attempts do not count
+                if (item.totalSeconds) {
+                    var lastDateModified = new Date(item.lastModified);
+                    var now = new Date();
+                    var timeDiff = Math.abs(now.getTime() - lastDateModified.getTime());
+                    var diffDays = Math.floor(timeDiff / (1000 * 3600 * 24));
+                    dayArray.push(diffDays);
+                }
+            });
             var divFileName = $('<div/>', {
                 html: '<b>' + originalFileName + '</b>'
             });
             $(divFileName).css('text-align', 'center');
             $(divFileName).css('width', '300px');
+
+            var divRecentActivity = $('<div/>', {
+                html: 'Last 30 days:<br/>'
+            });
+            $(divRecentActivity).css('text-align', 'center');
+            $(divRecentActivity).css('width', '300px');
+
+            var recentActivityTable = $('<table></table>');
+            $(recentActivityTable).css('width', '300px');
+            $(recentActivityTable).css('border', '1px solid black');
+            $(recentActivityTable).css('border-collapse', 'collapse');
+            for (i = 0; i < 2; i++) {
+                var row = $('<tr></tr>');
+                for (j = 0; j < 15; j++) {
+                    var cell = $('<td></td>');
+                    if ($.inArray(((15 * i) + j), dayArray) > -1) {
+                        $(cell).css('background-color', 'gray');
+                    }
+                    $(cell).css('height', '20px');
+                    $(cell).css('border', '1px solid black');
+                    $(cell).css('border-collapse', 'collapse');
+                    row.append(cell);
+                }
+                recentActivityTable.append(row);
+            }
+
             var divThumb = $('<div/>', {
                 "class": 'col-lg-4'
             });
@@ -122,6 +162,8 @@ function loadFiles() {
             divThumb.append(divTag);
             divThumb.append(aThumb);
             divThumb.append(divFileName);
+            divThumb.append(divRecentActivity);
+            divThumb.append(recentActivityTable);
             td.append(divThumb);
             tr.append(td);
             if ((index + 1) % 3 === 0) {
