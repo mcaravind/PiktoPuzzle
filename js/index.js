@@ -31,6 +31,7 @@ function deleteMap(fileName) {
     fs.unlinkSync(fsImageFile);
     fs.unlinkSync(fsJsonFile);
     fs.unlinkSync(fsScoreFile);
+    fs.rmdirSync(path.join('data',dirName));
     loadFiles();
 }
 

@@ -260,6 +260,267 @@
                     "maxscore": 28
                 }
             ]
+        },
+        {
+            "totalSeconds": 270,
+            "lastModified": 1431564958743,
+            "fullScore": 1188,
+            "fullMaxScore": 1236,
+            "itemScores": [
+                {
+                    "itemid": 4,
+                    "answer": "Portugal",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 11,
+                    "answer": "Denmark",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Ireland",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 18,
+                    "answer": "Estonia",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Switzerland",
+                    "score": 44,
+                    "maxscore": 44
+                },
+                {
+                    "itemid": 14,
+                    "answer": "France",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 13,
+                    "answer": "Luxembourg",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Poland",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Iceland",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 3,
+                    "answer": "United Kingdom",
+                    "score": 56,
+                    "maxscore": 56
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Slovenia",
+                    "score": 23,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Andorra",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 30,
+                    "answer": "Albania",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Sweden",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Belgium",
+                    "score": 10,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 29,
+                    "answer": "Bosnia",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 36,
+                    "answer": "Moldova",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 20,
+                    "answer": "Latvia",
+                    "score": 21,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 17,
+                    "answer": "Finland",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 33,
+                    "answer": "Serbia",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 38,
+                    "answer": "Russia",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 39,
+                    "answer": "Greece",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 32,
+                    "answer": "Macedonia",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Austria",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Norway",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 41,
+                    "answer": "Malta",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 28,
+                    "answer": "Croatia",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 40,
+                    "answer": "Turkey",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 12,
+                    "answer": "Germany",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Holland",
+                    "score": 10,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 19,
+                    "answer": "Lithuania",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 31,
+                    "answer": "Montenegro",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Spain",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 25,
+                    "answer": "Czech Republic",
+                    "score": 56,
+                    "maxscore": 56
+                },
+                {
+                    "itemid": 21,
+                    "answer": "Belarus",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 34,
+                    "answer": "Bulgaria",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 37,
+                    "answer": "Ukraine",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 42,
+                    "answer": "Cyprus",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Italy",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 26,
+                    "answer": "Slovakia",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 35,
+                    "answer": "Romania",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Hungary",
+                    "score": 28,
+                    "maxscore": 28
+                }
+            ],
+            "charactersPerSecond": 1.1444444444444444
         }
     ]
 }

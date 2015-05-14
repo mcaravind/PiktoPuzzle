@@ -591,6 +591,105 @@
                 }
             ],
             "charactersPerSecond": 1.59375
+        },
+        {
+            "totalSeconds": 124,
+            "lastModified": 1431564669816,
+            "fullScore": 306,
+            "fullMaxScore": 306,
+            "itemScores": [
+                {
+                    "itemid": 6,
+                    "answer": "Saidapet",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Guindy",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 38,
+                    "answer": "Mowlivakkam",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Choolaimedu",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Triplicane",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Thyagaraya Nagar",
+                    "score": 32,
+                    "maxscore": 32
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Georgetown",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 57,
+                    "answer": "Valasaravakkam",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Kilpauk",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Mylapore",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 41,
+                    "answer": "Purasavakkam",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 56,
+                    "answer": "Thirumangalam",
+                    "score": 26,
+                    "maxscore": 26
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Adyar",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 4,
+                    "answer": "Besant Nagar",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 37,
+                    "answer": "VSM Garden",
+                    "score": 20,
+                    "maxscore": 20
+                }
+            ],
+            "charactersPerSecond": 1.2338709677419355
         }
     ]
 }
