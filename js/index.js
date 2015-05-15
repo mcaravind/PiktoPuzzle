@@ -20,8 +20,6 @@ function showScores(fileName) {
     win.open("scores.html?file=" + fileName);
 }
 
-
-
 function deleteMap(fileName) {
     var dirName = getDirectoryFromFileName(fileName);
     var imageFileName = getImageFileName(fileName);
@@ -93,8 +91,13 @@ function loadFiles() {
                 var row = $('<tr></tr>');
                 for (j = 0; j < 15; j++) {
                     var cell = $('<td></td>');
+                    var sDate = new Date();
+                    sDate.setDate(sDate.getDate() - ((15 * i) + j));
+                    $(cell).html(sDate.getDate().toString());
+                    $(cell).css('width', '6%');
+                    $(cell).attr('align', 'center');
                     if ($.inArray(((15 * i) + j), dayArray) > -1) {
-                        $(cell).css('background-color', 'gray');
+                        $(cell).css('background-color', 'cadetblue');
                     }
                     $(cell).css('height', '20px');
                     $(cell).css('border', '1px solid black');
