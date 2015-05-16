@@ -64,9 +64,9 @@ function loadFiles() {
             $.each(scores, function (index, item) {
                 //incomplete attempts do not count
                 if (item.totalSeconds) {
-                    var lastDateModified = new Date(item.lastModified);
+                    var lastDateModified = (new Date(item.lastModified)).setHours(0,0,0,0);
                     var now = new Date();
-                    var timeDiff = Math.abs(now.getTime() - lastDateModified.getTime());
+                    var timeDiff = Math.abs(now.setHours(0,0,0,0) - lastDateModified);
                     var diffDays = Math.floor(timeDiff / (1000 * 3600 * 24));
                     dayArray.push(diffDays);
                 }

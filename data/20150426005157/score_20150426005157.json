@@ -315,6 +315,321 @@
                 }
             ],
             "charactersPerSecond": 0.9274193548387096
+        },
+        {
+            "totalSeconds": 155,
+            "lastModified": 1431668806421,
+            "fullScore": 273,
+            "fullMaxScore": 345,
+            "itemScores": [
+                {
+                    "itemid": 7,
+                    "answer": "Jabalpur",
+                    "score": 20,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 34,
+                    "answer": "Ledo",
+                    "score": 10,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 32,
+                    "answer": "Bhubaneshwar",
+                    "score": 8,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 45,
+                    "answer": "Sillong",
+                    "score": 3,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 44,
+                    "answer": "Siliguri",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 36,
+                    "answer": "Puri",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Calcutta",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 35,
+                    "answer": "Cuttack",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Lucknow",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 43,
+                    "answer": "Aizawl",
+                    "score": 12,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 33,
+                    "answer": "Itanagar",
+                    "score": 18,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 47,
+                    "answer": "Imphal",
+                    "score": 14,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Jamshedpur",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Raipur",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 46,
+                    "answer": "Kohima",
+                    "score": 14,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Varanasi",
+                    "score": 24,
+                    "maxscore": 24
+                }
+            ],
+            "charactersPerSecond": 0.7419354838709677
+        },
+        {
+            "totalSeconds": 111,
+            "lastModified": 1431668967918,
+            "fullScore": 327,
+            "fullMaxScore": 345,
+            "itemScores": [
+                {
+                    "itemid": 46,
+                    "answer": "Kohima",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Lucknow",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 47,
+                    "answer": "Imphal",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Varanasi",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Raipur",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 45,
+                    "answer": "Sillong",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 43,
+                    "answer": "Aizawl",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Jamshedpur",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 32,
+                    "answer": "Bhubaneshwar",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 35,
+                    "answer": "Cuttack",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 44,
+                    "answer": "Siliguri",
+                    "score": 22,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Calcutta",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 34,
+                    "answer": "Ledo",
+                    "score": 0,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 36,
+                    "answer": "Puri",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Jabalpur",
+                    "score": 20,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 33,
+                    "answer": "Itanagar",
+                    "score": 24,
+                    "maxscore": 24
+                }
+            ],
+            "charactersPerSecond": 1.0360360360360361
+        },
+        {
+            "totalSeconds": 68,
+            "lastModified": 1431669040737,
+            "fullScore": 345,
+            "fullMaxScore": 345,
+            "itemScores": [
+                {
+                    "itemid": 9,
+                    "answer": "Jamshedpur",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 46,
+                    "answer": "Kohima",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Calcutta",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 32,
+                    "answer": "Bhubaneshwar",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 35,
+                    "answer": "Cuttack",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Varanasi",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Lucknow",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 45,
+                    "answer": "Sillong",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 36,
+                    "answer": "Puri",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 33,
+                    "answer": "Itanagar",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 43,
+                    "answer": "Aizawl",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Raipur",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 44,
+                    "answer": "Siliguri",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Jabalpur",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 47,
+                    "answer": "Imphal",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 34,
+                    "answer": "Ledo",
+                    "score": 12,
+                    "maxscore": 12
+                }
+            ],
+            "charactersPerSecond": 1.6911764705882353
         }
     ]
 }

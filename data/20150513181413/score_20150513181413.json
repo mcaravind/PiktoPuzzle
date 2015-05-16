@@ -1566,6 +1566,267 @@
                 }
             ],
             "charactersPerSecond": 1.6071428571428572
+        },
+        {
+            "totalSeconds": 303,
+            "lastModified": 1431668138134,
+            "fullScore": 720,
+            "fullMaxScore": 720,
+            "itemScores": [
+                {
+                    "itemid": 1,
+                    "answer": "Morocco",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 19,
+                    "answer": "Chad",
+                    "score": 8,
+                    "maxscore": 8
+                },
+                {
+                    "itemid": 38,
+                    "answer": "Togo",
+                    "score": 8,
+                    "maxscore": 8
+                },
+                {
+                    "itemid": 34,
+                    "answer": "Tanzania",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 40,
+                    "answer": "Equitorial Guinea",
+                    "score": 34,
+                    "maxscore": 34
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Guinea",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 21,
+                    "answer": "Democratic Republic of Congo",
+                    "score": 56,
+                    "maxscore": 56
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Gabon",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Nigeria",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 35,
+                    "answer": "Kenya",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 29,
+                    "answer": "Egypt",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Mozambique",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 42,
+                    "answer": "Guinea-Bissau",
+                    "score": 26,
+                    "maxscore": 26
+                },
+                {
+                    "itemid": 18,
+                    "answer": "Libya",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 28,
+                    "answer": "Zambia",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 41,
+                    "answer": "The Gambia",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 13,
+                    "answer": "Burkima Faso",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Algeria",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 11,
+                    "answer": "Ivory Coast",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Botswana",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 31,
+                    "answer": "Cameroon",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 37,
+                    "answer": "South Africa",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 25,
+                    "answer": "Zimbabwe",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Angola",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 33,
+                    "answer": "Uganda",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 17,
+                    "answer": "Niger",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 36,
+                    "answer": "Ethiopia",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 4,
+                    "answer": "Western Sahara",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Congo",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 20,
+                    "answer": "Central African Republic",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 32,
+                    "answer": "Somalia",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 26,
+                    "answer": "Madagascar",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 39,
+                    "answer": "Benin",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Liberia",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 12,
+                    "answer": "Ghana",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Senegal",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Mauritiana",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Mali",
+                    "score": 8,
+                    "maxscore": 8
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Namibia",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Sierra Leone",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 30,
+                    "answer": "Sudan",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Tunisia",
+                    "score": 14,
+                    "maxscore": 14
+                }
+            ],
+            "charactersPerSecond": 1.188118811881188
         }
     ]
 }
