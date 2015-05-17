@@ -1762,6 +1762,183 @@
                 }
             ],
             "charactersPerSecond": 1.873134328358209
+        },
+        {
+            "totalSeconds": 122,
+            "lastModified": 1431745822196,
+            "fullScore": 720,
+            "fullMaxScore": 753,
+            "itemScores": [
+                {
+                    "itemid": 24,
+                    "answer": "Uruguay",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 18,
+                    "answer": "Peru",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Galapagos Island",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 5,
+                    "answer": "El Salvador",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Costa Rica",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 21,
+                    "answer": "Argentina",
+                    "score": 27,
+                    "maxscore": 27
+                },
+                {
+                    "itemid": 26,
+                    "answer": "Panama",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 20,
+                    "answer": "Bolivia",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 9,
+                    "answer": "The Bahamas",
+                    "score": 0,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 15,
+                    "answer": "French Guiana",
+                    "score": 39,
+                    "maxscore": 39
+                },
+                {
+                    "itemid": 25,
+                    "answer": "Nicaragua",
+                    "score": 27,
+                    "maxscore": 27
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Venezuela",
+                    "score": 27,
+                    "maxscore": 27
+                },
+                {
+                    "itemid": 28,
+                    "answer": "Falkland Islands",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 13,
+                    "answer": "Guyana",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Suriname",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Brazil",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Mexico",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 11,
+                    "answer": "Dominican Republic",
+                    "score": 54,
+                    "maxscore": 54
+                },
+                {
+                    "itemid": 4,
+                    "answer": "Belize",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 19,
+                    "answer": "Chile",
+                    "score": 15,
+                    "maxscore": 15
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Colombia",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 12,
+                    "answer": "Trinidad and Tobago",
+                    "score": 57,
+                    "maxscore": 57
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Cuba",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Honduras",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Guatemala",
+                    "score": 27,
+                    "maxscore": 27
+                },
+                {
+                    "itemid": 17,
+                    "answer": "Ecuador",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Haiti",
+                    "score": 15,
+                    "maxscore": 15
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Paraguay",
+                    "score": 24,
+                    "maxscore": 24
+                }
+            ],
+            "charactersPerSecond": 2.057377049180328
         }
     ]
 }

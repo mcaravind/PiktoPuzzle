@@ -789,6 +789,891 @@
                 }
             ],
             "charactersPerSecond": 1.3660714285714286
+        },
+        {
+            "totalSeconds": 260,
+            "lastModified": 1431746222944,
+            "fullScore": 694,
+            "fullMaxScore": 897,
+            "itemScores": [
+                {
+                    "itemid": 15,
+                    "answer": "Vyasarpadi",
+                    "score": 19,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 57,
+                    "answer": "Valasaravakkam",
+                    "score": 42,
+                    "maxscore": 42
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Washermanpet",
+                    "score": 23,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 50,
+                    "answer": "Korattur",
+                    "score": 9,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Choolaimedu",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 54,
+                    "answer": "Tiru Vi Ka Nagar",
+                    "score": 33,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Tondiarpet",
+                    "score": 19,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Saidapet",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 13,
+                    "answer": "Selaivayal",
+                    "score": 12,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 43,
+                    "answer": "Villivakkam",
+                    "score": 15,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 12,
+                    "answer": "Chinnasekkadu",
+                    "score": 17,
+                    "maxscore": 39
+                },
+                {
+                    "itemid": 4,
+                    "answer": "Besant Nagar",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 38,
+                    "answer": "Mowlivakkam",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Adyar",
+                    "score": 15,
+                    "maxscore": 15
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Mylapore",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Georgetown",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Tiruvottiyur",
+                    "score": 9,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Triplicane",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 11,
+                    "answer": "Manali",
+                    "score": 7,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Thyagaraya Nagar",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 37,
+                    "answer": "VSM Garden",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Kilpauk",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 41,
+                    "answer": "Purasavakkam",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 56,
+                    "answer": "Thirumangalam",
+                    "score": 39,
+                    "maxscore": 39
+                },
+                {
+                    "itemid": 42,
+                    "answer": "MMDA Layout",
+                    "score": 20,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Sathiya Moorthy Nagar",
+                    "score": 36,
+                    "maxscore": 63
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Guindy",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 51,
+                    "answer": "Pozhal",
+                    "score": 16,
+                    "maxscore": 18
+                }
+            ],
+            "charactersPerSecond": 1.15
+        },
+        {
+            "totalSeconds": 199,
+            "lastModified": 1431746479791,
+            "fullScore": 848,
+            "fullMaxScore": 897,
+            "itemScores": [
+                {
+                    "itemid": 9,
+                    "answer": "Georgetown",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 13,
+                    "answer": "Selaivayal",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Choolaimedu",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 42,
+                    "answer": "MMDA Layout",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Kilpauk",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Vyasarpadi",
+                    "score": 10,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 38,
+                    "answer": "Mowlivakkam",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Sathiya Moorthy Nagar",
+                    "score": 56,
+                    "maxscore": 63
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Thyagaraya Nagar",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 11,
+                    "answer": "Manali",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 57,
+                    "answer": "Valasaravakkam",
+                    "score": 42,
+                    "maxscore": 42
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Tondiarpet",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 56,
+                    "answer": "Thirumangalam",
+                    "score": 39,
+                    "maxscore": 39
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Adyar",
+                    "score": 15,
+                    "maxscore": 15
+                },
+                {
+                    "itemid": 43,
+                    "answer": "Villivakkam",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Mylapore",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 12,
+                    "answer": "Chinnasekkadu",
+                    "score": 39,
+                    "maxscore": 39
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Saidapet",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 51,
+                    "answer": "Pozhal",
+                    "score": 16,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 50,
+                    "answer": "Korattur",
+                    "score": 15,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Tiruvottiyur",
+                    "score": 27,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 37,
+                    "answer": "VSM Garden",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 54,
+                    "answer": "Tiru Vi Ka Nagar",
+                    "score": 46,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Washermanpet",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Guindy",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Triplicane",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 41,
+                    "answer": "Purasavakkam",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 4,
+                    "answer": "Besant Nagar",
+                    "score": 36,
+                    "maxscore": 36
+                }
+            ],
+            "charactersPerSecond": 1.5025125628140703
+        },
+        {
+            "totalSeconds": 250,
+            "lastModified": 1431820160535,
+            "fullScore": 827,
+            "fullMaxScore": 897,
+            "itemScores": [
+                {
+                    "itemid": 56,
+                    "answer": "Thirumangalam",
+                    "score": 39,
+                    "maxscore": 39
+                },
+                {
+                    "itemid": 4,
+                    "answer": "Besant Nagar",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 51,
+                    "answer": "Pozhal",
+                    "score": 16,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Vyasarpadi",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 54,
+                    "answer": "Tiru Vi Ka Nagar",
+                    "score": 46,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 11,
+                    "answer": "Manali",
+                    "score": 9,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Thyagaraya Nagar",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 13,
+                    "answer": "Selaivayal",
+                    "score": 24,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Mylapore",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Triplicane",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 41,
+                    "answer": "Purasavakkam",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 42,
+                    "answer": "MMDA Layout",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Adyar",
+                    "score": 15,
+                    "maxscore": 15
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Tondiarpet",
+                    "score": 24,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 43,
+                    "answer": "Villivakkam",
+                    "score": 20,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 12,
+                    "answer": "Chinnasekkadu",
+                    "score": 30,
+                    "maxscore": 39
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Saidapet",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 37,
+                    "answer": "VSM Garden",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Georgetown",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 38,
+                    "answer": "Mowlivakkam",
+                    "score": 28,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Tiruvottiyur",
+                    "score": 25,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Guindy",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Washermanpet",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 57,
+                    "answer": "Valasaravakkam",
+                    "score": 42,
+                    "maxscore": 42
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Kilpauk",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 50,
+                    "answer": "Korattur",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Choolaimedu",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Sathiya Moorthy Nagar",
+                    "score": 56,
+                    "maxscore": 63
+                }
+            ],
+            "charactersPerSecond": 1.196
+        },
+        {
+            "totalSeconds": 169,
+            "lastModified": 1431820375120,
+            "fullScore": 841,
+            "fullMaxScore": 897,
+            "itemScores": [
+                {
+                    "itemid": 6,
+                    "answer": "Saidapet",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Kilpauk",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 54,
+                    "answer": "Tiru Vi Ka Nagar",
+                    "score": 46,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Guindy",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Mylapore",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 37,
+                    "answer": "VSM Garden",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Washermanpet",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 51,
+                    "answer": "Pozhal",
+                    "score": 16,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 57,
+                    "answer": "Valasaravakkam",
+                    "score": 42,
+                    "maxscore": 42
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Choolaimedu",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 13,
+                    "answer": "Selaivayal",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 41,
+                    "answer": "Purasavakkam",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Tondiarpet",
+                    "score": 6,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 38,
+                    "answer": "Mowlivakkam",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Triplicane",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 42,
+                    "answer": "MMDA Layout",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Thyagaraya Nagar",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Vyasarpadi",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Adyar",
+                    "score": 15,
+                    "maxscore": 15
+                },
+                {
+                    "itemid": 4,
+                    "answer": "Besant Nagar",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 12,
+                    "answer": "Chinnasekkadu",
+                    "score": 39,
+                    "maxscore": 39
+                },
+                {
+                    "itemid": 56,
+                    "answer": "Thirumangalam",
+                    "score": 11,
+                    "maxscore": 39
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Tiruvottiyur",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 50,
+                    "answer": "Korattur",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 43,
+                    "answer": "Villivakkam",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 11,
+                    "answer": "Manali",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Georgetown",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Sathiya Moorthy Nagar",
+                    "score": 63,
+                    "maxscore": 63
+                }
+            ],
+            "charactersPerSecond": 1.7692307692307692
+        },
+        {
+            "totalSeconds": 165,
+            "lastModified": 1431820547229,
+            "fullScore": 895,
+            "fullMaxScore": 897,
+            "itemScores": [
+                {
+                    "itemid": 38,
+                    "answer": "Mowlivakkam",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Tondiarpet",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 42,
+                    "answer": "MMDA Layout",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 57,
+                    "answer": "Valasaravakkam",
+                    "score": 42,
+                    "maxscore": 42
+                },
+                {
+                    "itemid": 51,
+                    "answer": "Pozhal",
+                    "score": 16,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Triplicane",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Vyasarpadi",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Kilpauk",
+                    "score": 21,
+                    "maxscore": 21
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Adyar",
+                    "score": 15,
+                    "maxscore": 15
+                },
+                {
+                    "itemid": 43,
+                    "answer": "Villivakkam",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 56,
+                    "answer": "Thirumangalam",
+                    "score": 39,
+                    "maxscore": 39
+                },
+                {
+                    "itemid": 11,
+                    "answer": "Manali",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Thyagaraya Nagar",
+                    "score": 48,
+                    "maxscore": 48
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Saidapet",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Mylapore",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 37,
+                    "answer": "VSM Garden",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Georgetown",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Sathiya Moorthy Nagar",
+                    "score": 63,
+                    "maxscore": 63
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Tiruvottiyur",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 41,
+                    "answer": "Purasavakkam",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Washermanpet",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 12,
+                    "answer": "Chinnasekkadu",
+                    "score": 39,
+                    "maxscore": 39
+                },
+                {
+                    "itemid": 13,
+                    "answer": "Selaivayal",
+                    "score": 30,
+                    "maxscore": 30
+                },
+                {
+                    "itemid": 50,
+                    "answer": "Korattur",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 4,
+                    "answer": "Besant Nagar",
+                    "score": 36,
+                    "maxscore": 36
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Guindy",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Choolaimedu",
+                    "score": 33,
+                    "maxscore": 33
+                },
+                {
+                    "itemid": 54,
+                    "answer": "Tiru Vi Ka Nagar",
+                    "score": 48,
+                    "maxscore": 48
+                }
+            ],
+            "charactersPerSecond": 1.812121212121212
         }
     ]
 }
