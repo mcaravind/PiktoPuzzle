@@ -2,6 +2,8 @@
 
 PiktoPuzzle is a nw.js (formerly node-webkit) based desktop app to help memorize details in pictures. It is especially useful for memorizing maps and scientific diagrams.
 
+Project website: [PiktoPuzzle](http://www.learningfromtext.com/piktopuzzle)
+
 __Installation:__
 
 Double click the self extracting PiktoPuzzle.exe file to install the files, and click on nw.exe to launch the application. 

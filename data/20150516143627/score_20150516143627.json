@@ -1278,6 +1278,432 @@
                 }
             ],
             "charactersPerSecond": 2.0233918128654973
+        },
+        {
+            "totalSeconds": 339,
+            "lastModified": 1431839954387,
+            "fullScore": 341,
+            "fullMaxScore": 346,
+            "itemScores": [
+                {
+                    "itemid": 9,
+                    "answer": "Exhaust Pipe",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Water Jacket",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 30,
+                    "answer": "Piston",
+                    "score": 6,
+                    "maxscore": 6
+                },
+                {
+                    "itemid": 4,
+                    "answer": "Coil",
+                    "score": 4,
+                    "maxscore": 4
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Flywheel",
+                    "score": 8,
+                    "maxscore": 8
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Crankshaft",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 18,
+                    "answer": "Gears Driving Camshaft",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 20,
+                    "answer": "Water Pump",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 13,
+                    "answer": "Toothed Ring",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Camshaft",
+                    "score": 8,
+                    "maxscore": 8
+                },
+                {
+                    "itemid": 31,
+                    "answer": "Crankshaft",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Oil pump",
+                    "score": 8,
+                    "maxscore": 8
+                },
+                {
+                    "itemid": 12,
+                    "answer": "Connecting Rod",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 33,
+                    "answer": "Timing Belt",
+                    "score": 11,
+                    "maxscore": 11
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Cylinder",
+                    "score": 8,
+                    "maxscore": 8
+                },
+                {
+                    "itemid": 29,
+                    "answer": "Distributor",
+                    "score": 11,
+                    "maxscore": 11
+                },
+                {
+                    "itemid": 26,
+                    "answer": "Transmission",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Jet",
+                    "score": 3,
+                    "maxscore": 3
+                },
+                {
+                    "itemid": 25,
+                    "answer": "Gear Stick",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 11,
+                    "answer": "Starter motor",
+                    "score": 13,
+                    "maxscore": 13
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Spark plug",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Exhaust Valve",
+                    "score": 13,
+                    "maxscore": 13
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Piston Rings",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 34,
+                    "answer": "Spark Plug",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 19,
+                    "answer": "Dynamo",
+                    "score": 6,
+                    "maxscore": 6
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Inlet Valve",
+                    "score": 11,
+                    "maxscore": 11
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Piston",
+                    "score": 6,
+                    "maxscore": 6
+                },
+                {
+                    "itemid": 17,
+                    "answer": "Carburetter",
+                    "score": 8,
+                    "maxscore": 11
+                },
+                {
+                    "itemid": 21,
+                    "answer": "Float Chamber",
+                    "score": 13,
+                    "maxscore": 13
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Throttle Valve",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 28,
+                    "answer": "Camshaft",
+                    "score": 8,
+                    "maxscore": 8
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Valve Spring",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Valves",
+                    "score": 4,
+                    "maxscore": 6
+                },
+                {
+                    "itemid": 32,
+                    "answer": "Alternator",
+                    "score": 10,
+                    "maxscore": 10
+                }
+            ],
+            "charactersPerSecond": 1.0206489675516224
+        },
+        {
+            "totalSeconds": 524,
+            "lastModified": 1431900733763,
+            "fullScore": 692,
+            "fullMaxScore": 692,
+            "itemScores": [
+                {
+                    "itemid": 10,
+                    "answer": "Piston Rings",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Piston",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 4,
+                    "answer": "Coil",
+                    "score": 8,
+                    "maxscore": 8
+                },
+                {
+                    "itemid": 32,
+                    "answer": "Alternator",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 31,
+                    "answer": "Crankshaft",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Camshaft",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 25,
+                    "answer": "Gear Stick",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 2,
+                    "answer": "Spark plug",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 26,
+                    "answer": "Transmission",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Valve Spring",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 18,
+                    "answer": "Gears Driving Camshaft",
+                    "score": 44,
+                    "maxscore": 44
+                },
+                {
+                    "itemid": 33,
+                    "answer": "Timing Belt",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 29,
+                    "answer": "Distributor",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Exhaust Valve",
+                    "score": 26,
+                    "maxscore": 26
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Exhaust Pipe",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Jet",
+                    "score": 6,
+                    "maxscore": 6
+                },
+                {
+                    "itemid": 28,
+                    "answer": "Camshaft",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Valves",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Water Jacket",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 34,
+                    "answer": "Spark Plug",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 30,
+                    "answer": "Piston",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 19,
+                    "answer": "Dynamo",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 13,
+                    "answer": "Toothed Ring",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Flywheel",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 21,
+                    "answer": "Float Chamber",
+                    "score": 26,
+                    "maxscore": 26
+                },
+                {
+                    "itemid": 11,
+                    "answer": "Starter motor",
+                    "score": 26,
+                    "maxscore": 26
+                },
+                {
+                    "itemid": 12,
+                    "answer": "Connecting Rod",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Oil pump",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 20,
+                    "answer": "Water Pump",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 17,
+                    "answer": "Carburetter",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Crankshaft",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Cylinder",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Inlet Valve",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Throttle Valve",
+                    "score": 28,
+                    "maxscore": 28
+                }
+            ],
+            "charactersPerSecond": 0.6603053435114504
         }
     ]
 }

@@ -1425,6 +1425,291 @@
                 }
             ],
             "charactersPerSecond": 1.2006802721088434
+        },
+        {
+            "totalSeconds": 268,
+            "lastModified": 1431839606727,
+            "fullScore": 698,
+            "fullMaxScore": 706,
+            "itemScores": [
+                {
+                    "itemid": 46,
+                    "answer": "Bhutan",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 21,
+                    "answer": "South Korea",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 45,
+                    "answer": "Turkmenistan",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 9,
+                    "answer": "Bangladesh",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 18,
+                    "answer": "Macau",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 35,
+                    "answer": "Iraq",
+                    "score": 8,
+                    "maxscore": 8
+                },
+                {
+                    "itemid": 31,
+                    "answer": "Lebanon",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 11,
+                    "answer": "Japan",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 24,
+                    "answer": "Pakistan",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Yemen",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 6,
+                    "answer": "Brunei",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 44,
+                    "answer": "United Arab Emirates",
+                    "score": 40,
+                    "maxscore": 40
+                },
+                {
+                    "itemid": 2,
+                    "answer": "East Timor",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Russia",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 32,
+                    "answer": "Cyprus",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 40,
+                    "answer": "Afghanistan",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 22,
+                    "answer": "India",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 41,
+                    "answer": "Kuwait",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 16,
+                    "answer": "Cambodia",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 13,
+                    "answer": "China",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 42,
+                    "answer": "Bahrain",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 30,
+                    "answer": "Israel",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 5,
+                    "answer": "Malaysia",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 34,
+                    "answer": "Syria",
+                    "score": 3,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 36,
+                    "answer": "Uzbekistan",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 4,
+                    "answer": "Singapore",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Indonesia",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 23,
+                    "answer": "Nepal",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 26,
+                    "answer": "Iran",
+                    "score": 8,
+                    "maxscore": 8
+                },
+                {
+                    "itemid": 19,
+                    "answer": "Hong Kong",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 25,
+                    "answer": "Oman",
+                    "score": 8,
+                    "maxscore": 8
+                },
+                {
+                    "itemid": 17,
+                    "answer": "Philippines",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 37,
+                    "answer": "Tajikistan",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 28,
+                    "answer": "Saudi Arabia",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 8,
+                    "answer": "Myanmar",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 14,
+                    "answer": "Vietnam",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 7,
+                    "answer": "Thailand",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 10,
+                    "answer": "North Korea",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 12,
+                    "answer": "Mongolia",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 39,
+                    "answer": "Kazhakstan",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 20,
+                    "answer": "Taiwan",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 43,
+                    "answer": "Qatar",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 29,
+                    "answer": "Jordan",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 15,
+                    "answer": "Laos",
+                    "score": 8,
+                    "maxscore": 8
+                },
+                {
+                    "itemid": 33,
+                    "answer": "Turkey",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 38,
+                    "answer": "Kyrgyzstan",
+                    "score": 19,
+                    "maxscore": 20
+                }
+            ],
+            "charactersPerSecond": 1.3171641791044777
         }
     ]
 }
