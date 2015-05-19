@@ -1485,6 +1485,600 @@
                 }
             ],
             "charactersPerSecond": 2.088082901554404
+        },
+        {
+            "totalSeconds": 433,
+            "lastModified": 1431925142291,
+            "fullScore": 736,
+            "fullMaxScore": 806,
+            "itemScores": [
+                {
+                    "itemid": 145,
+                    "answer": "Boston",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 37,
+                    "answer": "Phoenix",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 143,
+                    "answer": "Hartford",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 88,
+                    "answer": "Madison",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 107,
+                    "answer": "Atlanta",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 129,
+                    "answer": "Concord",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 122,
+                    "answer": "Charleston",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 52,
+                    "answer": "Pierre",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Boise",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 81,
+                    "answer": "Little Rock",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 91,
+                    "answer": "Lansing",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 56,
+                    "answer": "Austin",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 17,
+                    "answer": "Carson City",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 43,
+                    "answer": "Santa Fe",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 93,
+                    "answer": "Indianapolis",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 131,
+                    "answer": "Providence",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 144,
+                    "answer": "Dover",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 31,
+                    "answer": "Denver",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 108,
+                    "answer": "Tallahassee",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Helena",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 133,
+                    "answer": "Trenton",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 51,
+                    "answer": "Bismarck",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 141,
+                    "answer": "Richmond",
+                    "score": 12,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 26,
+                    "answer": "Cheyenne",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 13,
+                    "answer": "Sacramento",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 60,
+                    "answer": "Lincoln",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 96,
+                    "answer": "Jackson",
+                    "score": 0,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Olympia",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 135,
+                    "answer": "Harrisburg",
+                    "score": 11,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 121,
+                    "answer": "Columbus",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 125,
+                    "answer": "Montpelier",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Salem",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 85,
+                    "answer": "Baton Rouge",
+                    "score": 10,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 76,
+                    "answer": "Des Moines",
+                    "score": 14,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 114,
+                    "answer": "Columbia",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 127,
+                    "answer": "Augusta",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 78,
+                    "answer": "Jefferson City",
+                    "score": 25,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 69,
+                    "answer": "Topeka",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 97,
+                    "answer": "Montgomery",
+                    "score": 8,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 105,
+                    "answer": "Frankfort",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 53,
+                    "answer": "St. Paul",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 101,
+                    "answer": "Nashville",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 142,
+                    "answer": "Albany",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Salt Lake City",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 138,
+                    "answer": "Raleigh",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 90,
+                    "answer": "Springfield",
+                    "score": 12,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 136,
+                    "answer": "Annapolis",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 71,
+                    "answer": "Oklahoma City",
+                    "score": 26,
+                    "maxscore": 26
+                }
+            ],
+            "charactersPerSecond": 0.930715935334873
+        },
+        {
+            "totalSeconds": 207,
+            "lastModified": 1431925369571,
+            "fullScore": 806,
+            "fullMaxScore": 806,
+            "itemScores": [
+                {
+                    "itemid": 78,
+                    "answer": "Jefferson City",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 56,
+                    "answer": "Austin",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 122,
+                    "answer": "Charleston",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 71,
+                    "answer": "Oklahoma City",
+                    "score": 26,
+                    "maxscore": 26
+                },
+                {
+                    "itemid": 93,
+                    "answer": "Indianapolis",
+                    "score": 24,
+                    "maxscore": 24
+                },
+                {
+                    "itemid": 101,
+                    "answer": "Nashville",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 133,
+                    "answer": "Trenton",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 135,
+                    "answer": "Harrisburg",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 143,
+                    "answer": "Hartford",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 51,
+                    "answer": "Bismarck",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 142,
+                    "answer": "Albany",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 60,
+                    "answer": "Lincoln",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 97,
+                    "answer": "Montgomery",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 125,
+                    "answer": "Montpelier",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 26,
+                    "answer": "Cheyenne",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 138,
+                    "answer": "Raleigh",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 107,
+                    "answer": "Atlanta",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 53,
+                    "answer": "St. Paul",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 13,
+                    "answer": "Sacramento",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 105,
+                    "answer": "Frankfort",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 88,
+                    "answer": "Madison",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 17,
+                    "answer": "Carson City",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 1,
+                    "answer": "Olympia",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 96,
+                    "answer": "Jackson",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 108,
+                    "answer": "Tallahassee",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 90,
+                    "answer": "Springfield",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 127,
+                    "answer": "Augusta",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 85,
+                    "answer": "Baton Rouge",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 69,
+                    "answer": "Topeka",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 31,
+                    "answer": "Denver",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 76,
+                    "answer": "Des Moines",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 3,
+                    "answer": "Salem",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 43,
+                    "answer": "Santa Fe",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 52,
+                    "answer": "Pierre",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 10,
+                    "answer": "Boise",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 136,
+                    "answer": "Annapolis",
+                    "score": 18,
+                    "maxscore": 18
+                },
+                {
+                    "itemid": 131,
+                    "answer": "Providence",
+                    "score": 20,
+                    "maxscore": 20
+                },
+                {
+                    "itemid": 121,
+                    "answer": "Columbus",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 144,
+                    "answer": "Dover",
+                    "score": 10,
+                    "maxscore": 10
+                },
+                {
+                    "itemid": 27,
+                    "answer": "Salt Lake City",
+                    "score": 28,
+                    "maxscore": 28
+                },
+                {
+                    "itemid": 141,
+                    "answer": "Richmond",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 129,
+                    "answer": "Concord",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 81,
+                    "answer": "Little Rock",
+                    "score": 22,
+                    "maxscore": 22
+                },
+                {
+                    "itemid": 114,
+                    "answer": "Columbia",
+                    "score": 16,
+                    "maxscore": 16
+                },
+                {
+                    "itemid": 145,
+                    "answer": "Boston",
+                    "score": 12,
+                    "maxscore": 12
+                },
+                {
+                    "itemid": 37,
+                    "answer": "Phoenix",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 91,
+                    "answer": "Lansing",
+                    "score": 14,
+                    "maxscore": 14
+                },
+                {
+                    "itemid": 22,
+                    "answer": "Helena",
+                    "score": 12,
+                    "maxscore": 12
+                }
+            ],
+            "charactersPerSecond": 1.9468599033816425
         }
     ]
 }
